@@ -34,6 +34,9 @@ Route::get('/listSurat', function () {
 Route::get('/uploadSurat', function () {
     return view('uploadSurat');
 });
+Route::get('/userList', function () {
+    return view('userList');
+});
 Route::get('/adminProfile', function () {
     return view('adminProfile');
 });

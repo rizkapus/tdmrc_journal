@@ -103,7 +103,7 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">person</i><span class="menu-title">User</span></a>
                 <div class="collapsible-body">
                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                        <li><a href="#"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>
+                        <li><a href="/userList"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>
                         </li>
                         
                     </ul>
