@@ -28,6 +28,12 @@ Route::get('/listSk', function () {
 Route::get('/uploadSk', function () {
     return view('uploadSk');
 });
+Route::get('/listSurat', function () {
+    return view('listSurat');
+});
+Route::get('/uploadSurat', function () {
+    return view('uploadSurat');
+});
 Route::get('/adminProfile', function () {
     return view('adminProfile');
 });

@@ -89,6 +89,17 @@
                 </div>
             </li>
 
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">drafts</i><span class="menu-title">Surat</span></a>
+                <div class="collapsible-body">
+                    <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                        <li><a href="/listSurat"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>
+                        </li>
+                        <li><a href="/uploadSurat"><i class="material-icons">radio_button_unchecked</i><span>Upload</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
             <li class="bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">person</i><span class="menu-title">User</span></a>
                 <div class="collapsible-body">
                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
