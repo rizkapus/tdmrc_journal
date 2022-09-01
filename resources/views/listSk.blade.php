@@ -33,6 +33,42 @@
                     </div>
                 </div>
 
+                <div class="col s12 m12 l12">
+                    <div id="form-with-validation" class="card card card-default scrollspy">
+                        <div class="card-content">
+                            <h4 class="card-title">Filter</h4>
+                            <form>
+                                <div class="row">
+                                    <div class="input-field col m4 s6">
+                                        <select class="select2 browser-default">
+                                            <option value="" disabled selected>Pilih Jenis SK</option>
+                                            <option value="romboid">Romboid</option>
+                                            <option value="trapeze">Trapeze</option>
+                                            <option value="triangle">Triangle</option>
+                                            <option value="polygon">Polygon</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field col m4 s6">
+                                        <select class="select2 browser-default">
+                                            <option value="" disabled selected>Pilih Tahun</option>
+                                            <option value="romboid">Romboid</option>
+                                            <option value="trapeze">Trapeze</option>
+                                            <option value="triangle">Triangle</option>
+                                            <option value="polygon">Polygon</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field col m4 s12">
+                                        <div class="input-field col s12">
+                                            <button class="btn cyan waves-effect waves-light" type="submit" name="action">
+                                                <i class="material-icons left">send</i> Pilih</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
                 <!--Table-->
                 <div class="col s12">              
                     <div class="section section-data-tables">

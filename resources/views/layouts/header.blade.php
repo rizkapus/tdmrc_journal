@@ -89,12 +89,28 @@
                 </div>
             </li>
 
-            <li class="bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">drafts</i><span class="menu-title">Surat</span></a>
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">drafts</i><span class="menu-title" data-i18n="Surat">Surat</span></a>
                 <div class="collapsible-body">
                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                        <li><a href="/listSurat"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>
+                        <li><a class="collapsible-header waves-effect waves-cyan" href="JavaScript:void(0)"><i class="material-icons">file_download</i><span data-i18n="Second level child">Surat Masuk</span></a>
+                            <div class="collapsible-body">
+                                    <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                                        <li><a href="/listSurat"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>
+                                        </li>
+                                        <li><a href="/uploadSurat"><i class="material-icons">radio_button_unchecked</i><span>Upload</span></a>
+                                        </li>
+                                    </ul>
+                            </div>
                         </li>
-                        <li><a href="/uploadSurat"><i class="material-icons">radio_button_unchecked</i><span>Upload</span></a>
+                        <li><a class="collapsible-header waves-effect waves-cyan" href="JavaScript:void(0)"><i class="material-icons">file_upload</i><span data-i18n="Second level child">Surat Keluar</span></a>
+                            <div class="collapsible-body">
+                                <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                                    <li><a href="/listSurat"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>
+                                    </li>
+                                    <li><a href="/uploadSurat"><i class="material-icons">radio_button_unchecked</i><span>Upload</span></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
