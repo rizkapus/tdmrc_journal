@@ -3,6 +3,9 @@
     <link rel="stylesheet" type="text/css" href="/vendors/animate-css/animate.css">
     <link rel="stylesheet" type="text/css" href="/vendors/chartist-js/chartist.min.css">
     <link rel="stylesheet" type="text/css" href="/vendors/chartist-js/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="/vendors/select2/select2.min.css" type="text/css">
+    <link rel="stylesheet" href="/vendors/select2/select2-materialize.css" type="text/css">
+
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/materialize.css">
