@@ -39,14 +39,16 @@
                         <h4 class="card-title">Form Upload Journal</h4>
                         <form>
                             <div class="row">
-                                <div class="input-field col s12">
-                                    <select>
-                                        <option value="" disabled selected>Select Author</option>
-                                        <option value="1">Manager</option>
-                                        <option value="2">Developer</option>
-                                        <option value="3">Business</option>
-                                    </select>
-                                    <label>Author</label>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <select class="select2 browser-default">
+                                            <option value="" disabled selected>Pilih Author</option>
+                                            <option value="romboid">Romboid</option>
+                                            <option value="trapeze">Trapeze</option>
+                                            <option value="triangle">Triangle</option>
+                                            <option value="polygon">Polygon</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
