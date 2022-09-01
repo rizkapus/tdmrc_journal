@@ -35,8 +35,13 @@
                                         <form>
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="name2" type="text">
-                                                    <label for="name2">Author</label>
+                                                    <select class="select2>
+                                                        <option value="" disabled selected>Group SK</option>
+                                                        <option value="1">Manager</option>
+                                                        <option value="2">Developer</option>
+                                                        <option value="3">Business</option>
+                                                    </select>
+                                                    <label>Choose Group SK</label>
                                                 </div>
                                             </div>
                                             <div class="row">

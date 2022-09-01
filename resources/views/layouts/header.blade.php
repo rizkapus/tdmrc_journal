@@ -134,6 +134,8 @@
     <script src="/vendors/chartist-js/chartist.min.js"></script>
     <script src="/vendors/chartist-js/chartist-plugin-tooltip.js"></script>
     <script src="/vendors/chartist-js/chartist-plugin-fill-donut.min.js"></script>
+    <script src="/vendors/select2/select2.full.min.js"></script>
+
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN THEME  JS-->
     <script src="/js/plugins.js"></script>
@@ -141,6 +143,7 @@
     <!-- BEGIN PAGE LEVEL JS-->
     <script src="/js/scripts/dashboard-modern.js"></script>
     <script src="/js/scripts/intro.js"></script>
+    <script src="/js/scripts/form-select2.js"></script>
     <!-- END PAGE LEVEL JS-->
 </body>
 

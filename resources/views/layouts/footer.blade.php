@@ -7,6 +7,7 @@
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/materialize.css">
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/pages/form-select2.css">
     <link rel="stylesheet" type="text/css" href="/css/pages/dashboard-modern.css">
     <link rel="stylesheet" type="text/css" href="/css/pages/intro.css">
     <!-- END: Page Level CSS-->
