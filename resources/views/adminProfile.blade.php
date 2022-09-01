@@ -47,8 +47,8 @@
                                     </div>
                                 </div>
                                 <div class="col s12 m5 quick-action-btns display-flex justify-content-end align-items-center pt-2">                                    
-                                    <a href="user-profile-page.html" class="btn-small btn-light-indigo">Profile</a>
-                                    <a href="page-users-edit.html" class="btn-small indigo">Edit</a>
+                                    <a href="" class="btn-small btn-light-indigo">Profile</a>
+                                    <a href="/editProfile" class="btn-small indigo">Edit</a>
                                 </div>
                             </div>
                         </div>

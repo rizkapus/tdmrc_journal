@@ -40,4 +40,7 @@ Route::get('/userList', function () {
 Route::get('/adminProfile', function () {
     return view('adminProfile');
 });
+Route::get('/editProfile', function () {
+    return view('editProfile');
+});
 
