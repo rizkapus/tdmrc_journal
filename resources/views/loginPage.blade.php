@@ -37,7 +37,7 @@
                         <form class="login-form">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <h5 class="ml-4">Sign in</h5>
+                                    <h5 class="ml-2"><center>Sign In into your account</center></h5>
                                 </div>
                             </div>
                             <div class="row margin">
@@ -64,17 +64,17 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <a href="index.html" class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12">Login</a>
+                                    <a href="index.html" class="btn waves-effect waves-light border-round gradient-45deg-indigo-purple col s12">Login</a>
                                 </div>
                             </div>
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="input-field col s6 m6 l6">
                                     <p class="margin medium-small"><a href="user-register.html">Register Now!</a></p>
                                 </div>
                                 <div class="input-field col s6 m6 l6">
                                     <p class="margin right-align medium-small"><a href="user-forgot-password.html">Forgot password ?</a></p>
                                 </div>
-                            </div>
+                            </div> --}}
                         </form>
                     </div>
                 </div>
