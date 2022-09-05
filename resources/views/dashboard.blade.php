@@ -8,7 +8,6 @@
 </head>
 <body>
     @include('layouts/header')
-    
                         <!--card stats start-->
                          <div id="card-stats" class="pt-0">
                             <div class="row">

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -34,25 +33,29 @@
             <div class="container">
                 <div id="login-page" class="row">
                     <div class="col s12 m6 l4 z-depth-4 card-panel border-radius-6 login-card bg-opacity-8">
-                        <form class="login-form">
+
+
+                        <form class="login-form" action="{{url('login/proses')}}" method="post">
                             <div class="row">
                                 <div class="input-field col s12">
                                     <h5 class="ml-2"><center>Sign In into your account</center></h5>
                                 </div>
                             </div>
                             <div class="row margin">
+
+                                @csrf
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix pt-2">person_outline</i>
-                                    <input id="username" type="text" placeholder="Username">
+                                    <input id="username" type="text" placeholder="Username" name="username">
                                 </div>
                             </div>
                             <div class="row margin">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix pt-2">lock_outline</i>
-                                    <input id="password" type="password" placeholder="Password">
+                                    <input id="password" type="password" placeholder="Password" name="password">
                                 </div>
                             </div>
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col s12 m12 l12 ml-2 mt-1">
                                     <p>
                                         <label>
@@ -61,10 +64,10 @@
                                         </label>
                                     </p>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <a href="index.html" class="btn waves-effect waves-light border-round gradient-45deg-indigo-purple col s12">Login</a>
+                                    <button  class="btn waves-effect waves-light border-round gradient-45deg-indigo-purple col s12">Login</button>
                                 </div>
                             </div>
                             {{-- <div class="row">

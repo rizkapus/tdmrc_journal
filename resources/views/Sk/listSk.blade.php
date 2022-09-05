@@ -77,7 +77,7 @@
                             <div class="col s12">
                                 <div class="card">
                                     <div class="card-content">
-                                        <h4 class="card-title">List Journal</h4>
+                                        <h4 class="card-title">List SK</h4>
                                         <div class="row">
                                             <div class="col s12">
                                                 <table id="page-length-option" class="display">
