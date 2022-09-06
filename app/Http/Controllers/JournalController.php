@@ -7,10 +7,17 @@ use Illuminate\Support\Facades\Auth;
 
 class JournalController extends Controller
 {
-    public function index(){
+    public function listJournal(){
        
-        return view('/Journal/listJournal')->with([
+        return view('Journal.listJournal')->with([
             'user' => Auth::user(),
         ]);
     }
+    public function uploadJournal(){
+       
+        return view('Journal.uploadJournal')->with([
+            'user' => Auth::user(),
+        ]);
+    }
+   
 }

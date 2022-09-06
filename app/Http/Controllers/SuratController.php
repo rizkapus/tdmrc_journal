@@ -7,10 +7,17 @@ use Illuminate\Support\Facades\Auth;
 
 class SuratController extends Controller
 {
-    public function index(){
+    public function listSurat(){
        
         return view('Surat.listSurat')->with([
             'user' => Auth::user(),
         ]);
     }
+    public function uploadSurat(){
+       
+        return view('Surat.uploadSurat')->with([
+            'user' => Auth::user(),
+        ]);
+    }
+    
 }

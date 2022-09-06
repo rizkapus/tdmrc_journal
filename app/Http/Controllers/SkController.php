@@ -7,10 +7,18 @@ use Illuminate\Support\Facades\Auth;
 
 class SkController extends Controller
 {
-    public function index(){
+    public function listSk(){
        
         return view('Sk.listSk')->with([
             'user' => Auth::user(),
         ]);
     }
+    public function uploadSk(){
+       
+        return view('Sk.uploadSk')->with([
+            'user' => Auth::user(),
+        ]);
+    }
+
+    
 }

@@ -33,16 +33,37 @@ Route::controller(LoginController::class)->group(function(){
 
 Route::group(['middleware' => ['auth']], function(){
     Route::group(['middleware' => ['cekUserLogin:1']], function(){
-        Route::get('/listJournal', [JournalController::class, 'index']);
-        Route::resource('/listSk', SkController::class);
-        Route::resource('/listSurat', SuratController::class);
-        Route::resource('/userList', UserController::class);
+        Route::get('/listJournal', [JournalController::class, 'listJournal']);
+        Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
+        Route::get('/listSk', [SkController::class, 'listSk']);
+        Route::get('/uploadSk', [SkController::class, 'uploadSk']);
+        Route::get('/listSurat', [SuratController::class, 'listSurat']);
+        Route::get('/uploadSurat', [SuratController::class, 'uploadSurat']);
+        Route::get('/userList', [UserController::class,'userList']);
+        Route::get('/addUser', [UserController::class,'addUser']);
     });
+    Route::group(['middleware' => ['cekUserLogin:2']], function(){
+        Route::get('/listJournal', [JournalController::class, 'listJournal']);
+        Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
+        Route::get('/listSk', [SkController::class, 'listSk']);
+        Route::get('/uploadSk', [SkController::class, 'uploadSk']);
+        Route::get('/listSurat', [SuratController::class, 'listSurat']);
+        Route::get('/uploadSurat', [SuratController::class, 'uploadSurat']);
+    });
+    Route::group(['middleware' => ['cekUserLogin:3']], function(){
+        Route::get('/listJournal', [JournalController::class, 'listJournal']);
+        Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
+        Route::get('/listSk', [SkController::class, 'listSk']);
+        Route::get('/uploadSk', [SkController::class, 'uploadSk']);
+        Route::get('/listSurat', [SuratController::class, 'listSurat']);
+        Route::get('/uploadSurat', [SuratController::class, 'uploadSurat']);
+    });
+    Route::group(['middleware' => ['cekUserLogin:4']], function(){
+        Route::get('/listJournal', [JournalController::class, 'listJournal']);
+        Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
+    });
+    
 });
-
-
-
-
 
 
 

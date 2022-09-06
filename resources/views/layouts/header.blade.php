@@ -123,6 +123,8 @@
                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                         <li><a href="/userList"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>
                         </li>                        
+                        <li><a href="/addUser"><i class="material-icons">radio_button_unchecked</i><span>Add User</span></a>
+                        </li>                        
                     </ul>
                 </div>
             </li>
