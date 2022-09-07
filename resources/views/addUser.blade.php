@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add User</title>
 </head>
 <body>
     @include('layouts/header')
@@ -36,42 +36,43 @@
                             <div id="basic-form" class="card card card-default scrollspy">
                                 <div class="card-content">
                                     <h4 class="card-title">Add User</h4>
-                                    <form>
+                                    <form action="/addUser" method="post">
+                                        @csrf
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input type="text" id="fn">
-                                                <label for="fn">Name</label>
+                                                <input type="text" id="name" name="name" required >
+                                                <label>Name</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input type="text" id="fn">
-                                                <label for="fn">Username</label>
+                                                <input type="text" id="username" name="username" required >
+                                                <label>Username</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="email" type="email">
-                                                <label for="email">Email</label>                                              
+                                                <input id="email" type="email" name="email" required >
+                                                <label>Email</label>                                              
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="password" type="password">
+                                                <input id="password" type="password" name="password" required >
                                                 <label for="password">Password</label>
                                             </div>
                                         </div>
+                                        
                                         <div class="row">
                                          <div class="input-field col s12"> 
-                                            <h6>Role</h6>                                                       
-                                            <select class="input-field">                                                                               
+                                            <h6>Role</h6>                                                                      
+                                            <select class="input-field" id="level" name="level">                                                                               
                                                 <option disabled selected>Pilih Role</option>
-                                                <option value="admin">Admin</option>
-                                                <option value="director">Director</option>
-                                                <option value="author">Author</option>                                            
+                                                <option value="2">Admin</option>
+                                                <option value="3">Director</option>
+                                                <option value="4">Author</option>                                            
                                             </select>
-                                        </div>                                      
-                                        
+                                        </div>                                          
                                             <div class="row">
                                                 <div class="input-field col s12">
                                                     <button class="btn green waves-effect waves-light right" type="submit" name="action">Create User

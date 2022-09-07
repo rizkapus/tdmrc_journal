@@ -5,19 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- BEGIN: VENDOR CSS-->
     <link rel="stylesheet" type="text/css" href="/vendors/vendors.min.css">
     <link rel="stylesheet" href="/vendors/select2/select2.min.css" type="text/css">
     <link rel="stylesheet" href="/vendors/select2/select2-materialize.css" type="text/css">
-    <!-- END: VENDOR CSS-->
-    <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/materialize.css">
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/style.css">
     <link rel="stylesheet" type="text/css" href="/css/pages/page-users.css">
-    <!-- END: Page Level CSS-->
-    <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="/css/custom/custom.css">
-    <!-- END: Custom CSS-->
 
 </head>
 <body>
@@ -126,20 +120,13 @@
 
      @include('layouts/footer')
 
-    <!-- BEGIN VENDOR JS-->
+
     <script src="/js/vendors.min.js"></script>
-    <!-- BEGIN VENDOR JS-->
-    <!-- BEGIN PAGE VENDOR JS-->
     <script src="/vendors/select2/select2.full.min.js"></script>
     <script src="/vendors/jquery-validation/jquery.validate.min.js"> </script>
-    <!-- END PAGE VENDOR JS-->
-    <!-- BEGIN THEME  JS-->
     <script src="/js/plugins.js"></script>
     <script src="/js/search.js"></script>
     <script src="/js/custom/custom-script.js"></script>
-    <!-- END THEME  JS-->
-    <!-- BEGIN PAGE LEVEL JS-->
     <script src="/js/scripts/page-users.js"></script>
-    <!-- END PAGE LEVEL JS-->
 </body>
 </html>
