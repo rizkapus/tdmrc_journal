@@ -19,28 +19,28 @@ class userData extends Seeder
                 'name' => 'Superadmin',
                 'username' => 'superadmin',
                 'password' => bcrypt('123456'),
-                'level' => 1,
+                'role_id' => 1,
                 'email' => 'a@gmail.com'
             ],
             [
                 'name' => 'adminisitrator',
                 'username' => 'admin',
                 'password' => bcrypt('123456'),
-                'level' => 2,
+                'role_id' => 2,
                 'email' => 'b@gmail.com'
             ],
             [
                 'name' => 'director',
                 'username' => 'director',
                 'password' => bcrypt('123456'),
-                'level' => 3,
+                'role_id' => 3,
                 'email' => 'c@gmail.com'
             ],
             [
                 'name' => 'author',
                 'username' => 'author',
                 'password' => bcrypt('123456'),
-                'level' => 4,
+                'role_id' => 4,
                 'email' => 'd@gmail.com'
             ],
             ];

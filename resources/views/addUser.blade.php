@@ -66,7 +66,7 @@
                                         <div class="row">
                                          <div class="input-field col s12"> 
                                             <h6>Role</h6>                                                                      
-                                            <select class="input-field" id="level" name="level">                                                                               
+                                            <select class="input-field" id="role_id" name="role_id">                                                                               
                                                 <option disabled selected>Pilih Role</option>
                                                 <option value="2">Admin</option>
                                                 <option value="3">Director</option>

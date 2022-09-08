@@ -92,7 +92,7 @@
                         data-i18n="Dashboard">Dashboard</span></a>
             </li>
 
-            @if ($user->level == 1)
+            @if ($user->role_id == 1)
                 <li class="bold"><a class="collapsible-header waves-effect waves-cyan "
                         href="JavaScript:void(0)"><i class="material-icons">folder_open</i><span
                             class="menu-title">E-Journal</span></a>
@@ -174,7 +174,7 @@
                         </ul>
                     </div>
                 </li>
-            @elseif($user->level == 2)
+            @elseif($user->role_id == 2)
                 <li class="bold"><a class="collapsible-header waves-effect waves-cyan "
                         href="JavaScript:void(0)"><i class="material-icons">folder_open</i><span
                             class="menu-title">E-Journal</span></a>
@@ -241,7 +241,7 @@
                         </ul>
                     </div>
                 </li>
-            @elseif($user->level == 3)
+            @elseif($user->role_id == 3)
                 <li class="bold"><a class="collapsible-header waves-effect waves-cyan "
                         href="JavaScript:void(0)"><i class="material-icons">folder_open</i><span
                             class="menu-title">E-Journal</span></a>
@@ -291,7 +291,7 @@
                         </ul>
                     </div>
                 </li>
-            @elseif($user->level == 4)
+            @elseif($user->role_id == 4)
                 <li class="bold"><a class="collapsible-header waves-effect waves-cyan "
                         href="JavaScript:void(0)"><i class="material-icons">folder_open</i><span
                             class="menu-title">E-Journal</span></a>
@@ -346,7 +346,7 @@
                                         <i></i>
                                     </span>
                                     <div class="user-content">
-                                        <h6 class="line-height-0">M. Sabri Rabbanni</h6>
+                                        <h6 class="line-height-0">M. Shabri Rabbani</h6>
                                         <p class="medium-small blue-grey-text text-lighten-3 pt-3">No.HP:</p>
                                     </div>
                                     <span class="secondary-content medium-small">Dev</span>

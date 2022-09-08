@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+
+use App\Models\users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
+
 
 class UserController extends Controller
 {
     public function userList(){
        
-        return view('userList')->with([
+        $data = users::paginate();
+        return view('userList',['data'=>$data])->with([
             'user' => Auth::user(),
         ]);
 
@@ -32,7 +34,7 @@ class UserController extends Controller
             'username' => 'required',
             'email' => 'required',
             'password' => 'required',
-            'level' => 'required',
+            'role_id' => 'required',
         ]);
         
         $validatedData['password'] = bcrypt($validatedData['password']);

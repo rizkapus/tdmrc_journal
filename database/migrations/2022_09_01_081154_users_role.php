@@ -14,8 +14,8 @@ class UsersRole extends Migration
     public function up()
     {
         Schema::create('users_role', function (Blueprint $table) {
-            $table->bigInteger('level');
-            $table->string('role');
+            $table->id();
+            $table->string('role',100);
         });
     }
 

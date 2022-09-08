@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\Admin;
-use App\Http\Controllers\Beranda;
 use App\Http\Controllers\JournalController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\LoginController;
@@ -31,8 +29,8 @@ Route::controller(LoginController::class)->group(function(){
 
 });
 
-Route::group(['middleware' => ['auth']], function(){
-    Route::group(['middleware' => ['cekUserLogin:1']], function(){
+Route::group(['middleware' => ['auth','cekUserLogin:1,2']], function(){
+  
         Route::get('/listJournal', [JournalController::class, 'listJournal']);
         Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
         Route::get('/listSk', [SkController::class, 'listSk']);
@@ -43,8 +41,12 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/addUser', [UserController::class,'addUser']);
         Route::post('/addUser', [UserController::class, 'register']);
 
-    });
-    // Route::group(['middleware' => ['cekUserLogin:2']], function(){
+  
+    
+    
+});
+
+// Route::group(['middleware' => ['cekUserLogin:2']], function(){
     //     Route::get('/listJournal', [JournalController::class, 'listJournal']);
     //     Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
     //     Route::get('/listSk', [SkController::class, 'listSk']);
@@ -64,37 +66,3 @@ Route::group(['middleware' => ['auth']], function(){
     //     Route::get('/listJournal', [JournalController::class, 'listJournal']);
     //     Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
     // });
-    
-});
-
-
-
-
-
-// Route::get('/listJournal', function () {
-//     return view('listJournal');
-// });
-// Route::get('/uploadJournal', function () {
-//     return view('uploadJournal');
-// });
-// Route::get('/listSk', function () {
-//     return view('listSk');
-// });
-// Route::get('/uploadSk', function () {
-//     return view('uploadSk');
-// });
-// Route::get('/listSurat', function () {
-//     return view('listSurat');
-// });
-// Route::get('/uploadSurat', function () {
-//     return view('uploadSurat');
-// });
-// Route::get('/userList', function () {
-//     return view('userList');
-// });
-// Route::get('/adminProfile', function () {
-//     return view('adminProfile');
-// });
-// Route::get('/editProfile', function () {
-//     return view('editProfile');
-// });

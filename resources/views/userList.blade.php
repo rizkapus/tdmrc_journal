@@ -86,7 +86,7 @@
                                                     <th>id</th>
                                                     <th>username</th>
                                                     <th>name</th>
-                                                    <th>last activity</th>
+                                                    <th>E-mail</th>
                                                     <th>verified</th>
                                                     <th>role</th>
                                                     <th>status</th>
@@ -95,14 +95,15 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($data as $item)
                                                 <tr>
                                                     <td></td>
-                                                    <td>300</td>
-                                                    <td><a href="">dean3004</a>
-                                                    </td>
-                                                    <td>Dean Stanley</td>
+                                                    <td>{{$item['id']}}</td>
+                                                    <td>{{$item['username']}}</td>
+                                                    <td>{{$item['name']}}</td>
+                                                    <td>{{$item['email']}}</td>
                                                     <td>30/04/2019</td>
-                                                    <td>No</td>
+                                                    <td>{{$item->role_id}}</td>
                                                     <td>Staff</td>
                                                     <td><span class="chip green lighten-5">
                                                             <span class="green-text">Active</span>
@@ -111,39 +112,7 @@
                                                     <td><a href=""><i class="material-icons">edit</i></a></td>
                                                     <td><a href=""><i class="material-icons">remove_red_eye</i></a></td>
                                                 </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td><a href="">dean3004</a>
-                                                    </td>
-                                                    <td>Dean Stanley</td>
-                                                    <td>30/04/2019</td>
-                                                    <td>No</td>
-                                                    <td>Staff</td>
-                                                    <td><span class="chip green lighten-5">
-                                                            <span class="green-text">Active</span>
-                                                        </span>
-                                                    </td>
-                                                    <td><a href=""><i class="material-icons">edit</i></a></td>
-                                                    <td><a href=""><i class="material-icons">remove_red_eye</i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>300</td>
-                                                    <td><a href="">dean3004</a>
-                                                    </td>
-                                                    <td>Dean Stanley</td>
-                                                    <td>30/04/2019</td>
-                                                    <td>No</td>
-                                                    <td>Staff</td>
-                                                    <td><span class="chip green lighten-5">
-                                                            <span class="green-text">Active</span>
-                                                        </span>
-                                                    </td>
-                                                    <td><a href=""><i class="material-icons">edit</i></a></td>
-                                                    <td><a href=""><i class="material-icons">remove_red_eye</i></a></td>
-                                                </tr>
-                                                
+                                                @endforeach                          
                                             </tbody>
                                         </table>
                                     </div>
