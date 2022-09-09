@@ -29,40 +29,25 @@ Route::controller(LoginController::class)->group(function(){
 
 });
 
-Route::group(['middleware' => ['auth','cekUserLogin:1,2']], function(){
+Route::group(['middleware' => ['auth','cekUserLogin:1,2,3,4']], function(){
   
         Route::get('/listJournal', [JournalController::class, 'listJournal']);
-        Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
-        Route::get('/listSk', [SkController::class, 'listSk']);
-        Route::get('/uploadSk', [SkController::class, 'uploadSk']);
-        Route::get('/listSurat', [SuratController::class, 'listSurat']);
-        Route::get('/uploadSurat', [SuratController::class, 'uploadSurat']);
+        Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);           
+
+});
+
+Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
+    Route::get('/listSk', [SkController::class, 'listSk']);
+    Route::get('/uploadSk', [SkController::class, 'uploadSk']);
+    Route::get('/listSurat', [SuratController::class, 'listSurat']);
+    Route::get('/uploadSurat', [SuratController::class, 'uploadSurat']);
+});
+
+Route::group(['middleware' => ['auth','cekUserLogin:1']], function(){
         Route::get('/userList', [UserController::class,'userList']);
         Route::get('/addUser', [UserController::class,'addUser']);
         Route::post('/addUser', [UserController::class, 'register']);
-
-  
-    
-    
 });
 
-// Route::group(['middleware' => ['cekUserLogin:2']], function(){
-    //     Route::get('/listJournal', [JournalController::class, 'listJournal']);
-    //     Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
-    //     Route::get('/listSk', [SkController::class, 'listSk']);
-    //     Route::get('/uploadSk', [SkController::class, 'uploadSk']);
-    //     Route::get('/listSurat', [SuratController::class, 'listSurat']);
-    //     Route::get('/uploadSurat', [SuratController::class, 'uploadSurat']);
-    // });
-    // Route::group(['middleware' => ['cekUserLogin:3']], function(){
-    //     Route::get('/listJournal', [JournalController::class, 'listJournal']);
-    //     Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
-    //     Route::get('/listSk', [SkController::class, 'listSk']);
-    //     Route::get('/uploadSk', [SkController::class, 'uploadSk']);
-    //     Route::get('/listSurat', [SuratController::class, 'listSurat']);
-    //     Route::get('/uploadSurat', [SuratController::class, 'uploadSurat']);
-    // });
-    // Route::group(['middleware' => ['cekUserLogin:4']], function(){
-    //     Route::get('/listJournal', [JournalController::class, 'listJournal']);
-    //     Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);
-    // });
+
+
