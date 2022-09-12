@@ -47,6 +47,9 @@ Route::group(['middleware' => ['auth','cekUserLogin:1']], function(){
         Route::get('/userList', [UserController::class,'userList']);
         Route::get('/addUser', [UserController::class,'addUser']);
         Route::post('/addUser', [UserController::class, 'register']);
+        Route::get('/delete/{id}', [UserController::class, 'delete']);
+        Route::get('/editProfile/{id}', [UserController::class, 'edit']);
+        Route::post('/updateProfile/{id}', [UserController::class, 'update']);
 });
 
 

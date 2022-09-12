@@ -7,13 +7,13 @@ use App\Models\User;
 use App\Models\users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
     public function userList(){
        
-        $data = users::paginate();
+        $data = users::with('role')->paginate();
         return view('userList',['data'=>$data])->with([
             'user' => Auth::user(),
         ]);
@@ -41,8 +41,31 @@ class UserController extends Controller
  
         User::create($validatedData);
         return redirect('/addUser');
-
         
     }
     
+    public function delete($id){
+    
+      $data = users::findOrFail($id);
+      $data->delete();
+      
+
+      return redirect('/userList');
+    }
+
+    public function edit($id){
+        
+        $data = users::findOrFail($id);
+       
+        return view('editProfile', compact('data'))->with([
+            'user' => Auth::user(),
+        ]);
+    }
+
+    public function update(Request $request, $id){
+        $data = users::findOrFail($id);
+        $data->update($request->all());
+        return redirect('/userList')->with('success', 'data berhasil diupdate');
+    }
+
 }

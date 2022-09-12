@@ -17,7 +17,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s10 m6 l6 breadcrumbs-left">
-                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>User</span></h5>
+                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>User List</span></h5>
                             <ol class="breadcrumbs mb-0">
                                 <li class="breadcrumb-item"><a href="#">User</a>
                                 </li>
@@ -36,37 +36,19 @@
                             <div class="card-panel">
                                 <div class="row">
                                     <form>
-                                        <div class="col s12 m6 l3">
-                                            <label for="users-list-verified">Verified</label>
+                                        <div class="col s12 m6 l7">
+                                            <label for="users-list-verified">Role</label>
                                             <div class="input-field">
                                                 <select class="form-control" id="users-list-verified">
-                                                    <option value="">Any</option>
-                                                    <option value="Yes">Yes</option>
-                                                    <option value="No">No</option>
+                                                    <option value=""></option>
+                                                    <option value="">superadmin</option>
+                                                    <option value="">admin</option>
+                                                    <option value="">director</option>
+                                                    <option value="">author</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col s12 m6 l3">
-                                            <label for="users-list-role">Role</label>
-                                            <div class="input-field">
-                                                <select class="form-control" id="users-list-role">
-                                                    <option value="">Any</option>
-                                                    <option value="User">User</option>
-                                                    <option value="Staff">Staff</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col s12 m6 l3">
-                                            <label for="users-list-status">Status</label>
-                                            <div class="input-field">
-                                                <select class="form-control" id="users-list-status">
-                                                    <option value="">Any</option>
-                                                    <option value="Active">Active</option>
-                                                    <option value="Close">Close</option>
-                                                    <option value="Banned">Banned</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                        
                                         <div class="col s12 m6 l3 display-flex align-items-center show-btn">
                                             <button type="submit" class="btn btn-block indigo waves-effect waves-light">Show</button>
                                         </div>
@@ -83,39 +65,36 @@
                                             <thead>
                                                 <tr>
                                                     <th></th>
-                                                    <th>id</th>
-                                                    <th>username</th>
-                                                    <th>name</th>
-                                                    <th>E-mail</th>
-                                                    <th>verified</th>
-                                                    <th>role</th>
-                                                    <th>status</th>
-                                                    <th>edit</th>
-                                                    <th>view</th>
+                                                    <th>No</th>
+                                                    <th>Username</th>
+                                                    <th>Name</th>
+                                                    <th>E-mail</th>                                                 
+                                                    <th>Role</th>                                                   
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @php
+                                                    $no=1;
+                                                @endphp
                                                 @foreach ($data as $item)
                                                 <tr>
                                                     <td></td>
-                                                    <td>{{$item['id']}}</td>
+                                                    <td>{{$no++}}</td>
                                                     <td>{{$item['username']}}</td>
                                                     <td>{{$item['name']}}</td>
-                                                    <td>{{$item['email']}}</td>
-                                                    <td>30/04/2019</td>
-                                                    <td>{{$item->role_id}}</td>
-                                                    <td>Staff</td>
-                                                    <td><span class="chip green lighten-5">
-                                                            <span class="green-text">Active</span>
-                                                        </span>
-                                                    </td>
-                                                    <td><a href=""><i class="material-icons">edit</i></a></td>
-                                                    <td><a href=""><i class="material-icons">remove_red_eye</i></a></td>
+                                                    <td>{{$item['email']}}</td>                                                 
+                                                    <td>{{$item->role->role}}</td>
+                                                    <td>                                                        
+                                                        <a href="/editProfile/{{$item->id}}"  class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
+                                                        <a href="/delete/{{$item->id}}" type="submit" class="btn-floating btn-small waves-effect waves-light red" 
+                                                            onclick="return confirm('hapus data ini?')"><i class="material-icons">delete</i></a>                                                         
+                                                    </td>                              
                                                 </tr>
                                                 @endforeach                          
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div> 
                                     <!-- datatable ends -->
                                 </div>
                             </div>

@@ -46,13 +46,13 @@
                                 @csrf
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix pt-2">person_outline</i>
-                                    <input id="username" type="text" placeholder="Username" name="username">
+                                    <input id="username" type="text" placeholder="Username" name="username" required>
                                 </div>
                             </div>
                             <div class="row margin">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix pt-2">lock_outline</i>
-                                    <input id="password" type="password" placeholder="Password" name="password">
+                                    <input id="password" type="password" placeholder="Password" name="password" required>
                                 </div>
                             </div>
                             {{-- <div class="row">
