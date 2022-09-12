@@ -95,12 +95,12 @@
                                             </tbody>
                                         </table>
                                     </div> 
-                                    <!-- datatable ends -->
+                                    
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <!-- users list ends -->
+                    
                     </div>
         </div>
     </div>
