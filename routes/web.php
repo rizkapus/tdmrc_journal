@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3,4']], function(){
   
         Route::get('/listJournal', [JournalController::class, 'listJournal']);
         Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);           
+        Route::post('/uploadJournal', [JournalController::class, 'postJournal']);           
 
 });
 

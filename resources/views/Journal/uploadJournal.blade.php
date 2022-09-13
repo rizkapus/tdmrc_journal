@@ -37,42 +37,50 @@
                 <div id="placeholder" class="card card card-default scrollspy">
                     <div class="card-content">
                         <h4 class="card-title">Form Upload Journal</h4>
-                        <form>
+                        <form method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <select class="select2 browser-default">
-                                            <option value="" disabled selected>Pilih Author</option>
-                                            <option value="romboid">Romboid</option>
-                                            <option value="trapeze">Trapeze</option>
-                                            <option value="triangle">Triangle</option>
-                                            <option value="polygon">Polygon</option>
+                                        <select class="input-field" id="author" name="author">
+                                            <option disabled selected>Pilih Author</option>
+                                            <option value="Syamsidik">Syamsidik</option>
+                                            <option value="Muksin">Muksin</option>
+                                            <option value="">Ella Meilianda</option>
+                                            <option value="">Yunita Idris</option>
+                                            <option value="">Rina Suryani Oktari</option>
+                                            <option value="">Saumi Syahreza</option>
+                                            <option value="">Alfi Rahman</option>
+                                            <option value="">Ichsan</option>
+                                            <option value="">Ibnu Rusydy</option>
+                                            <option value="">Intan Dewi Kumala</option>
+                                            <option value="">Haekal Arief Haridhi</option>
+                                            <option value="">Rizanna Rosemany</option>
+                                            <option value="">Juliana Fisaini</option>
+                                           
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="" id="name2" type="text">
+                                    <input placeholder="" id="nama" name="nama" type="text">
                                     <label for="name2">Title</label>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="input-field col s12">
-                                    <input placeholder="" id="name2" type="text">
+                                <div class="input-field col s12 ">
+                                    <input placeholder="" id="tanggal_terbit" name="tanggal_terbit" type="date" value="">
                                     <label for="name2">Tahun</label>
                                 </div>
                             </div>
                             <!--file-upload-->
-                            <div id="file-upload" class="section">
-                                <div class="row section">
-                                    <div class="col s12 m4 l3">
-                                        <p>Upload file</p>
-                                    </div>
-                                    <div class="col s12 m8 l9">
-                                        <input type="file" id="input-file-now" class="dropify"
-                                            data-default-file="" />
-                                    </div>
+                            <div class="row">
+                                <div class="input-field col">
+                                    <p>File</p>   
+                                    <br>                                 
+                                    <input placeholder="" id="file" name="file" type="file">
+                                    
                                 </div>
                             </div>
                             <div class="row">
