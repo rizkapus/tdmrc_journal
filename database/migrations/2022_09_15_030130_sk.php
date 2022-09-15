@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class JenisSk extends Migration
+class Sk extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class JenisSk extends Migration
      */
     public function up()
     {
-        Schema::create('jenis_sk', function (Blueprint $table) {
+        Schema::create('sk', function(Blueprint $table){
             $table->id();
+            $table->string('nama');
+            $table->date('tanggal_terbit');
             $table->string('jenis_sk');
-            $table->rememberToken();
+            $table->string('file');
             $table->timestamps();
         });
     }

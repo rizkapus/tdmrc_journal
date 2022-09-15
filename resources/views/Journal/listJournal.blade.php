@@ -97,10 +97,10 @@
                                                             <td>
                                                                  <a href="{{asset('files/journal/'.$item->file)}}" target="_blank" >lihat file</a>   
                                                             </td>
-                                                            <td>
-                                                                <a class="btn-floating btn-small waves-effect waves-light"><i class="material-icons">remove_red_eye</i></a>
-                                                                <a class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
-                                                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                                                            <td>                                                                
+                                                                <a href="/editJournal/{{$item->id}}" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
+                                                                <a href="/deleteJournal/{{$item->id}}" type="submit" class="btn-floating btn-small waves-effect waves-light red" 
+                                                                    onclick="return confirm('hapus data ini?')"><i class="material-icons">delete</i></a>
                                                             </td>
                                                         </tr>
                                                         

@@ -35,40 +35,36 @@
                 <div id="placeholder" class="card card card-default scrollspy">
                     <div class="card-content">
                         <h4 class="card-title">Form Upload SK</h4>
-                        <form>
+                        <form method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <select class="select2 browser-default">
-                                        <option value="" disabled selected>Pilih Jenis SK</option>
-                                        <option value="romboid">Romboid</option>
-                                        <option value="trapeze">Trapeze</option>
-                                        <option value="triangle">Triangle</option>
-                                        <option value="polygon">Polygon</option>
+                                    <select class="select2 browser-default" id="jenis_sk" name="jenis_sk">
+                                        <option disabled selected>Pilih Jenis SK</option>
+                                        <option value="kegiatan">Kegiatan</option>
+                                        <option value="pangkat">Pangkat</option>
+                                        
                                     </select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="" id="name2" type="text">
+                                    <input placeholder="" id="nama" name="nama" type="text">
                                     <label for="name2">Title</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="" id="name2" type="text">
+                                    <input placeholder="" id="tanggal_terbit" name="tanggal_terbit" type="date">
                                     <label for="name2">Tahun</label>
                                 </div>
                             </div>
                             <!--file-upload-->
                             <div id="file-upload" class="section">
-                                <div class="row section">
-                                    <div class="col s12 m4 l3">
-                                        <p>Upload file</p>
-                                    </div>
-                                    <div class="col s12 m8 l9">
-                                        <input type="file" id="input-file-now" class="dropify"
-                                            data-default-file="" />
-                                    </div>
+                                <div class="input-field col">
+                                    <p>File</p>   
+                                    <br>                                 
+                                    <input placeholder="" id="file" name="file" type="file">                                  
                                 </div>
                             </div>
                             <div class="row">

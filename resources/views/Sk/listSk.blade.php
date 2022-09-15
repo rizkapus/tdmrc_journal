@@ -86,55 +86,35 @@
                                                             <th>No</th>
                                                             <th>Nama</th>
                                                             <th>Tanggal Terbit</th>
-                                                            <th>Author</th>
+                                                            <th>Jenis Sk</th>
                                                             <th>File</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        @foreach ($dataSk as $item)
                                                         <tr>
-                                                            <td>1</td>
-                                                            <td>aaaaaa</td>
-                                                            <td>1/1/2022</td>
-                                                            <td>asdasdas</td>
-                                                            <td>file</td>
+                                                            <td>{{$loop->iteration}}</td>
+                                                            <td>{{$item->nama}}</td>
+                                                            <td>{{$item->tanggal_terbit}}</td>
+                                                            <td>{{$item->jenis_sk}}</td>
                                                             <td>
-                                                                <a class="btn-floating btn-small waves-effect waves-light"><i class="material-icons">remove_red_eye</i></a>
-                                                                <a class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
-                                                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                                                                 <a href="{{asset('files/sk/'.$item->file)}}" target="_blank" >lihat file</a>   
                                                             </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2</td>
-                                                            <td>bbbbbbb</td>
-                                                            <td>2/2/2022</td>
-                                                            <td>lalalalala</td>
-                                                            <td>file</td>
-                                                            <td>
-                                                                <a class="btn-floating btn-small waves-effect waves-light"><i class="material-icons">remove_red_eye</i></a>
-                                                                <a class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
-                                                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                                                            <td>                                                                
+                                                                <a href="/editSk/{{$item->id}}" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
+                                                                <a href="/deleteSk/{{$item->id}}" type="submit" class="btn-floating btn-small waves-effect waves-light red" 
+                                                                    onclick="return confirm('hapus data ini?')"><i class="material-icons">delete</i></a>
                                                             </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3</td>
-                                                            <td>cccccccc</td>
-                                                            <td>3/3/2022</td>
-                                                            <td>sasasasas</td>
-                                                            <td>file</td>
-                                                            <td>
-                                                                <a class="btn-floating btn-small waves-effect waves-light"><i class="material-icons">remove_red_eye</i></a>
-                                                                <a class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
-                                                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
-                                                            </td>
-                                                        </tr>
+                                                        @endforeach
+                                                                                                                
                                                     </tbody>
                                                     <tfoot>
                                                         <tr>
                                                             <th>No</th>
                                                             <th>Nama</th>
                                                             <th>Tanggal Terbit</th>
-                                                            <th>Author</th>
+                                                            <th>Jenis Sk</th>
                                                             <th>File</th>
                                                             <th>Action</th>
                                                         </tr>

@@ -33,13 +33,26 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3,4']], function(){
   
         Route::get('/listJournal', [JournalController::class, 'listJournal']);
         Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);           
-        Route::post('/uploadJournal', [JournalController::class, 'postJournal']);           
+        Route::post('/uploadJournal', [JournalController::class, 'postJournal']); 
+        Route::get('/editJournal/{id}', [JournalController::class, 'editJournal']);
+        Route::post('/updateJournal/{id}', [JournalController::class, 'updateJournal']);
+        Route::get('/deleteJournal/{id}', [JournalController::class, 'deleteJournal']);
+         
+                 
 
 });
 
 Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
+
     Route::get('/listSk', [SkController::class, 'listSk']);
     Route::get('/uploadSk', [SkController::class, 'uploadSk']);
+    Route::post('/uploadSk', [SkController::class, 'postSk']); 
+    Route::get('/editSk/{id}', [SkController::class, 'editSk']);
+    Route::post('/updateSk/{id}', [SkController::class, 'updateSk']);
+    Route::get('/deleteSk/{id}', [SkController::class, 'deleteSk']);
+
+
+
     Route::get('/listSurat', [SuratController::class, 'listSurat']);
     Route::get('/uploadSurat', [SuratController::class, 'uploadSurat']);
 });
