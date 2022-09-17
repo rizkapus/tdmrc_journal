@@ -34,47 +34,57 @@
                                 <div id="placeholder" class="card card card-default scrollspy">
                                     <div class="card-content">
                                         <h4 class="card-title">Form Upload Surat</h4>
-                                        <form>
+                                        <form method="post" enctype="multipart/form-data">
+                                            @csrf
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="name2" type="text">
+                                                    <input placeholder="" id="no_surat" name="no_surat" type="text">
                                                     <label for="name2">No Surat</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="name2" type="text">
+                                                    <input placeholder="" id="pengirim" name="pengirim" type="text">
                                                     <label for="name2">Pengirim</label>
                                                 </div>
                                             </div>                                  
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="name2" type="text">
+                                                    <input placeholder="" id="perihal" name="perihal" type="text">
                                                     <label for="name2">Perihal</label>
                                                 </div>
                                             </div> 
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="name2" type="text">
+                                                    <input placeholder="" id="tanggal_surat" name="tanggal_surat" type="date">
                                                     <label for="name2">Tanggal Surat</label>
                                                 </div>
                                             </div> 
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="name2" type="text">
+                                                    <input placeholder="" id="tanggal_diterima" name="tanggal_diterima" type="date">
                                                     <label for="name2">Tanggal Diterima</label>
                                                 </div>
                                             </div> 
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="name2" type="text">
+                                                    <input placeholder="" id="pengolah" name="pengolah" type="text">
                                                     <label for="name2">Pengolah</label>
                                                 </div>
                                             </div> 
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="name2" type="text">
+                                                    <input placeholder="" id="disposisi" name="disposisi" type="text">
                                                     <label for="name2">Disposisi</label>
+                                                </div>
+                                            </div> 
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <select class="input-field" name="verified" id="verified">
+                                                        <option disabled selected>Verifikasi</option>
+                                                        <option value="1">Sudah Diverifikasi</option>
+                                                        <option value="0">Belum Diverifikasi</option>
+                                                    </select>
                                                 </div>
                                             </div> 
                                             <!--file-upload-->
@@ -84,7 +94,7 @@
                                                         <p>Upload file</p>
                                                     </div>
                                                     <div class="col s12 m8 l9">
-                                                        <input type="file" id="input-file-now" class="dropify" data-default-file="" />
+                                                        <input type="file" id="file" name="file" class="dropify" />
                                                     </div>
                                                 </div>                                                                
                                             </div>                                            

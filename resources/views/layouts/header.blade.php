@@ -133,10 +133,10 @@
                                         data-i18n="Second level child">Surat Masuk</span></a>
                                 <div class="collapsible-body">
                                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                                        <li><a href="/listSurat"><i
+                                        <li><a href="/listSuratMasuk"><i
                                                     class="material-icons">radio_button_unchecked</i><span>List</span></a>
                                         </li>
-                                        <li><a href="/uploadSurat"><i
+                                        <li><a href="/uploadSuratMasuk"><i
                                                     class="material-icons">radio_button_unchecked</i><span>Upload</span></a>
                                         </li>
                                     </ul>
@@ -147,10 +147,10 @@
                                         data-i18n="Second level child">Surat Keluar</span></a>
                                 <div class="collapsible-body">
                                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                                        <li><a href="/listSurat"><i
+                                        <li><a href="/listSuratKeluar"><i
                                                     class="material-icons">radio_button_unchecked</i><span>List</span></a>
                                         </li>
-                                        <li><a href="/uploadSurat"><i
+                                        <li><a href="/uploadSuratKeluar"><i
                                                     class="material-icons">radio_button_unchecked</i><span>Upload</span></a>
                                         </li>
                                     </ul>
@@ -215,10 +215,10 @@
                                         data-i18n="Second level child">Surat Masuk</span></a>
                                 <div class="collapsible-body">
                                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                                        <li><a href="/listSurat"><i
+                                        <li><a href="/listSuratMasuk"><i
                                                     class="material-icons">radio_button_unchecked</i><span>List</span></a>
                                         </li>
-                                        <li><a href="/uploadSurat"><i
+                                        <li><a href="/uploadSuratMasuk"><i
                                                     class="material-icons">radio_button_unchecked</i><span>Upload</span></a>
                                         </li>
                                     </ul>
@@ -229,10 +229,10 @@
                                         data-i18n="Second level child">Surat Keluar</span></a>
                                 <div class="collapsible-body">
                                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                                        <li><a href="/listSurat"><i
+                                        <li><a href="/listSuratKeluar"><i
                                                     class="material-icons">radio_button_unchecked</i><span>List</span></a>
                                         </li>
-                                        <li><a href="/uploadSurat"><i
+                                        <li><a href="/uploadSuratKeluar"><i
                                                     class="material-icons">radio_button_unchecked</i><span>Upload</span></a>
                                         </li>
                                     </ul>
@@ -282,7 +282,7 @@
                                         data-i18n="Second level child">Surat Masuk</span></a>
                                 <div class="collapsible-body">
                                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                                        <li><a href="/listSurat"><i
+                                        <li><a href="/listSuratMasuk"><i
                                                     class="material-icons">radio_button_unchecked</i><span>List</span></a>
                                         </li>
                                     </ul>

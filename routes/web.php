@@ -4,7 +4,7 @@ use App\Http\Controllers\JournalController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SkController;
-use App\Http\Controllers\SuratController;
+use App\Http\Controllers\SuratMasukController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,10 +51,15 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
     Route::post('/updateSk/{id}', [SkController::class, 'updateSk']);
     Route::get('/deleteSk/{id}', [SkController::class, 'deleteSk']);
 
+    Route::get('/listSuratMasuk', [SuratMasukController::class, 'listSurat']);
+    Route::get('/uploadSuratMasuk', [SuratMasukController::class, 'uploadSurat']);
+    Route::post('/uploadSuratMasuk', [SuratMasukController::class, 'postSurat']);
+    Route::get('/editSuratMasuk/{id}', [SuratMasukController::class, 'editSurat']);
+    Route::post('/updateSuratMasuk/{id}', [SuratMasukController::class, 'updateSurat']);
+    Route::get('/deleteSuratMasuk/{id}', [SuratMasukController::class, 'deleteSurat']);
 
 
-    Route::get('/listSurat', [SuratController::class, 'listSurat']);
-    Route::get('/uploadSurat', [SuratController::class, 'uploadSurat']);
+
 });
 
 Route::group(['middleware' => ['auth','cekUserLogin:1']], function(){
