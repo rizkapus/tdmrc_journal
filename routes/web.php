@@ -4,6 +4,7 @@ use App\Http\Controllers\JournalController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SkController;
+use App\Http\Controllers\SuratKeluarController;
 use App\Http\Controllers\SuratMasukController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -58,6 +59,13 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
     Route::post('/updateSuratMasuk/{id}', [SuratMasukController::class, 'updateSurat']);
     Route::get('/deleteSuratMasuk/{id}', [SuratMasukController::class, 'deleteSurat']);
 
+    Route::get('/listSuratKeluar', [SuratKeluarController::class, 'listSurat']);
+    Route::get('/uploadSuratKeluar', [SuratKeluarController::class, 'uploadSurat']);
+    Route::post('/uploadSuratKeluar', [SuratKeluarController::class, 'postSurat']);
+    Route::get('/editSuratKeluar/{id}', [SuratKeluarController::class, 'editSurat']);
+    Route::post('/updateSuratKeluar/{id}', [SuratKeluarController::class, 'updateSurat']);
+    Route::get('/deleteSuratKeluar/{id}', [SuratKeluarController::class, 'deleteSurat']);
+   
 
 
 });

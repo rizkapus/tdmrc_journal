@@ -34,54 +34,45 @@
                                 <div id="placeholder" class="card card card-default scrollspy">
                                     <div class="card-content">
                                         <h4 class="card-title">Form Upload Surat</h4>
-                                        <form method="post" enctype="multipart/form-data">
+                                        <form action="/updateSuratKeluar/{{$dt->id}}" method="post" enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="no_surat" name="no_surat" type="text">
+                                                    <input placeholder="" id="no_surat" name="no_surat" type="text" value="{{$dt->no_surat}}">
                                                     <label for="name2">No Surat</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="pengirim" name="pengirim" type="text">
-                                                    <label for="name2">Pengirim</label>
+                                                    <input placeholder="" id="pengirim" name="pengirim" type="text" value="{{$dt->penerima}}">
+                                                    <label for="name2">Penerima</label>
                                                 </div>
                                             </div>                                  
+                                           
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="perihal" name="perihal" type="text">
-                                                    <label for="name2">Perihal</label>
-                                                </div>
-                                            </div> 
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="" id="tanggal_surat" name="tanggal_surat" type="date">
+                                                    <input placeholder="" id="tanggal_surat" name="tanggal_surat" type="date" value="{{$dt->tanggal_surat}}">
                                                     <label for="name2">Tanggal Surat</label>
                                                 </div>
                                             </div> 
+                                            
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="tanggal_diterima" name="tanggal_diterima" type="date">
-                                                    <label for="name2">Tanggal Diterima</label>
-                                                </div>
-                                            </div> 
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="" id="pengolah" name="pengolah" type="text">
+                                                    <input placeholder="" id="pengolah" name="pengolah" type="text" value="{{$dt->pengolah}}">
                                                     <label for="name2">Pengolah</label>
                                                 </div>
                                             </div> 
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="disposisi" name="disposisi" type="text">
+                                                    <input placeholder="" id="disposisi" name="disposisi" type="text" value="{{$dt->disposisi}}">
                                                     <label for="name2">Disposisi</label>
                                                 </div>
                                             </div> 
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <select class="input-field" name="verified" id="verified">
-                                                        <option disabled selected>Verifikasi</option>
+                                                    <p>Verifikasi</p>
+                                                    <select class="input-field" name="verified" id="verified">             
+                                                        <option disabled selected>{{$dt->verified}}</option>
                                                         <option value="1">Sudah Diverifikasi</option>
                                                         <option value="0">Belum Diverifikasi</option>
                                                     </select>
@@ -91,7 +82,9 @@
                                             <div id="file-upload" class="section">
                                                 <div class="row section">
                                                     <div class="col s12 m4 l3">
-                                                        <p>Upload file</p>
+                                                        <p>File</p>
+                                                        <p>{{$dt->file}}</p>
+                                                        <br>
                                                     </div>
                                                     <div class="col s12 m8 l9">
                                                         <input type="file" id="file" name="file" class="dropify" />

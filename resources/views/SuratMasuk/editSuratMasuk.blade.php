@@ -48,24 +48,14 @@
                                                     <label for="name2">Pengirim</label>
                                                 </div>
                                             </div>                                  
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="" id="perihal" name="perihal" type="text" value="{{$dt->perihal}}">
-                                                    <label for="name2">Perihal</label>
-                                                </div>
-                                            </div> 
+                                           
                                             <div class="row">
                                                 <div class="input-field col s12">
                                                     <input placeholder="" id="tanggal_surat" name="tanggal_surat" type="date" value="{{$dt->tanggal_surat}}">
                                                     <label for="name2">Tanggal Surat</label>
                                                 </div>
                                             </div> 
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="" id="tanggal_diterima" name="tanggal_diterima" type="date" value="{{$dt->tanggal_diterima}}">
-                                                    <label>Tanggal Diterima</label>
-                                                </div>
-                                            </div> 
+                                            
                                             <div class="row">
                                                 <div class="input-field col s12">
                                                     <input placeholder="" id="pengolah" name="pengolah" type="text" value="{{$dt->pengolah}}">
@@ -80,8 +70,8 @@
                                             </div> 
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <select class="input-field" name="verified" id="verified">
-                                                        
+                                                    <p>Verifikasi</p>
+                                                    <select class="input-field" name="verified" id="verified">             
                                                         <option disabled selected>{{$dt->verified}}</option>
                                                         <option value="1">Sudah Diverifikasi</option>
                                                         <option value="0">Belum Diverifikasi</option>

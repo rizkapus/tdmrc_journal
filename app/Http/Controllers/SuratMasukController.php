@@ -11,13 +11,13 @@ class SuratMasukController extends Controller
     public function listSurat(){
        
         $dataSurat = uploadsuratmasuk::latest()->get();
-        return view('Surat.listSuratMasuk',compact('dataSurat'))->with([
+        return view('SuratMasuk.listSuratMasuk',compact('dataSurat'))->with([
             'user' => Auth::user(),
         ]);
     }
     public function uploadSurat(){
        
-        return view('Surat.uploadSuratMasuk')->with([
+        return view('SuratMasuk.uploadSuratMasuk')->with([
             'user' => Auth::user(),
         ]);
     }   
@@ -29,9 +29,7 @@ class SuratMasukController extends Controller
             $dtUpload = new uploadsuratmasuk;
             $dtUpload->no_surat = $request->no_surat;
             $dtUpload->pengirim = $request->pengirim;
-            $dtUpload->perihal = $request->perihal;
             $dtUpload->tanggal_surat = $request->tanggal_surat;
-            $dtUpload->tanggal_diterima = $request->tanggal_diterima;
             $dtUpload->pengolah = $request->pengolah;
             $dtUpload->disposisi = $request->disposisi;
             $dtUpload->verified = $request->verified;
@@ -47,7 +45,7 @@ class SuratMasukController extends Controller
     public function editSurat($id){
 
         $dt = uploadsuratmasuk::findorfail($id);
-        return view('Surat.editSuratMasuk', compact('dt'))->with([
+        return view('SuratMasuk.editSuratMasuk', compact('dt'))->with([
             'user' => Auth::user(),
         ]);
 
@@ -60,10 +58,8 @@ class SuratMasukController extends Controller
 
         $dt = [
             'no_surat' => $request['no_surat'],
-            'pengirim' => $request['pengirim'],
-            'perihal' => $request['perihal'],            
-            'tanggal_surat' => $request['tanggal_surat'],            
-            'tanggal_diterima' => $request['tanggal_diterima'],            
+            'pengirim' => $request['pengirim'],       
+            'tanggal_surat' => $request['tanggal_surat'],                      
             'pengolah' => $request['pengolah'],            
             'disposisi' => $request['disposisi'],            
             'verified' => $request['verified'],            

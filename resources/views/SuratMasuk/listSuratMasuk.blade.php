@@ -77,9 +77,7 @@
                                                             <th>No</th>
                                                             <th>No Surat</th>
                                                             <th>Pengirim</th>
-                                                            <th>Perihal</th>
                                                             <th>Tanggal Surat</th>
-                                                            <th>Tanggal Diterima</th>
                                                             <th>Pengolah</th>
                                                             <th>Disposisi</th>
                                                             <th>File</th>
@@ -88,15 +86,12 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        @foreach ($dataSurat as $item)
-                                                                                             
+                                                        @foreach ($dataSurat as $item)                                                                                            
                                                         <tr>
                                                             <td>{{$loop->iteration}}</td>
                                                             <td>{{$item->no_surat}}</td>
                                                             <td>{{$item->pengirim}}</td>
-                                                            <td>{{$item->perihal}}</td>
                                                             <td>{{$item->tanggal_surat}}</td>
-                                                            <td>{{$item->tanggal_diterima}}</td>
                                                             <td>{{$item->pengolah}}</td>
                                                             <td>{{$item->disposisi}}</td>
                                                             <td>
@@ -110,9 +105,7 @@
                                                             </td>
                                                         </tr>
                                                         @endforeach
-
-                                                    </tbody>
-                                                    
+                                                    </tbody>                                                   
                                                 </table>
                                             </div>
                                         </div>
