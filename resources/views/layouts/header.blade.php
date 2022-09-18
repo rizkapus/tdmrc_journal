@@ -41,7 +41,7 @@
                                 data-target="slide-out-right"><i class="material-icons">headset_mic</i></a></li>
                         <li><a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);"
                                 data-target="profile-dropdown"><span class="avatar-status avatar-online"><img
-                                        src="/images/user/1.jpg" alt="avatar" width="150"
+                                        src="/images/user/1.png" alt="avatar" width="150"
                                         height="50"><i></i></span></a></li>
 
                     </ul>
@@ -52,7 +52,7 @@
                     <!-- profile-dropdown-->
                     <ul class="dropdown-content" id="profile-dropdown">
                         <li><a class="grey-text text-darken-1">{{ $user->name }}</a></li>
-                        <li><a class="grey-text text-darken-1" href="/adminProfile"><i
+                        <li><a class="grey-text text-darken-1" href="/userProfile"><i
                                     class="material-icons">person_outline</i> Profile</a></li>
                         <li><a class="grey-text text-darken-1" href="{{ url('logout') }}"><i
                                     class="material-icons">keyboard_tab</i> Logout</a></li>

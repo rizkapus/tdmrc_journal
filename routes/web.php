@@ -3,6 +3,7 @@
 use App\Http\Controllers\JournalController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SkController;
 use App\Http\Controllers\SuratKeluarController;
 use App\Http\Controllers\SuratMasukController;
@@ -40,7 +41,7 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3,4']], function(){
         Route::post('/updateJournal/{id}', [JournalController::class, 'updateJournal']);
         Route::get('/deleteJournal/{id}', [JournalController::class, 'deleteJournal']);
 
-       // Route::get();
+        Route::get('/userProfile',[ProfileController::class, 'showProfile']);
 
 });
 
