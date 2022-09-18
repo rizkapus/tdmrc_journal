@@ -5,18 +5,12 @@
     <link rel="stylesheet" type="text/css" href="/vendors/chartist-js/chartist-plugin-tooltip.css">
     <link rel="stylesheet" href="/vendors/select2/select2.min.css" type="text/css">
     <link rel="stylesheet" href="/vendors/select2/select2-materialize.css" type="text/css">
-
-    <!-- END: VENDOR CSS-->
-    <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/materialize.css">
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/style.css">
     <link rel="stylesheet" type="text/css" href="/css/pages/form-select2.css">
     <link rel="stylesheet" type="text/css" href="/css/pages/dashboard-modern.css">
     <link rel="stylesheet" type="text/css" href="/css/pages/intro.css">
-    <!-- END: Page Level CSS-->
-    <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="/css/custom/custom.css">
-    <!-- END: Custom CSS-->
 
 <!-- BEGIN: Footer-->
 <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-purple gradient-shadow navbar-border navbar-shadow">
