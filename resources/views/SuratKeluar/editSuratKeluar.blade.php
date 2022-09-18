@@ -44,7 +44,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input placeholder="" id="pengirim" name="pengirim" type="text" value="{{$dt->penerima}}">
+                                                    <input placeholder="" id="penerima" name="penerima" type="text" value="{{$dt->penerima}}">
                                                     <label for="name2">Penerima</label>
                                                 </div>
                                             </div>                                  

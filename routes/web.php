@@ -31,20 +31,22 @@ Route::controller(LoginController::class)->group(function(){
 });
 
 Route::group(['middleware' => ['auth','cekUserLogin:1,2,3,4']], function(){
-  
+
+        //route journal
         Route::get('/listJournal', [JournalController::class, 'listJournal']);
         Route::get('/uploadJournal', [JournalController::class, 'uploadJournal']);           
         Route::post('/uploadJournal', [JournalController::class, 'postJournal']); 
         Route::get('/editJournal/{id}', [JournalController::class, 'editJournal']);
         Route::post('/updateJournal/{id}', [JournalController::class, 'updateJournal']);
         Route::get('/deleteJournal/{id}', [JournalController::class, 'deleteJournal']);
-         
-                 
+
+       // Route::get();
 
 });
 
 Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
 
+    //route SK
     Route::get('/listSk', [SkController::class, 'listSk']);
     Route::get('/uploadSk', [SkController::class, 'uploadSk']);
     Route::post('/uploadSk', [SkController::class, 'postSk']); 
@@ -52,6 +54,7 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
     Route::post('/updateSk/{id}', [SkController::class, 'updateSk']);
     Route::get('/deleteSk/{id}', [SkController::class, 'deleteSk']);
 
+    //route Surat Masuk
     Route::get('/listSuratMasuk', [SuratMasukController::class, 'listSurat']);
     Route::get('/uploadSuratMasuk', [SuratMasukController::class, 'uploadSurat']);
     Route::post('/uploadSuratMasuk', [SuratMasukController::class, 'postSurat']);
@@ -59,6 +62,7 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
     Route::post('/updateSuratMasuk/{id}', [SuratMasukController::class, 'updateSurat']);
     Route::get('/deleteSuratMasuk/{id}', [SuratMasukController::class, 'deleteSurat']);
 
+    //route Surat Keluar
     Route::get('/listSuratKeluar', [SuratKeluarController::class, 'listSurat']);
     Route::get('/uploadSuratKeluar', [SuratKeluarController::class, 'uploadSurat']);
     Route::post('/uploadSuratKeluar', [SuratKeluarController::class, 'postSurat']);
@@ -71,6 +75,8 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
 });
 
 Route::group(['middleware' => ['auth','cekUserLogin:1']], function(){
+
+        //route user (just superadmin)
         Route::get('/userList', [UserController::class,'userList']);
         Route::get('/addUser', [UserController::class,'addUser']);
         Route::post('/addUser', [UserController::class, 'register']);

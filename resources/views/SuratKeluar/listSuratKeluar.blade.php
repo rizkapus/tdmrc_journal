@@ -99,8 +99,8 @@
                                                            </td>
                                                             <td>
                                                                
-                                                                <a href="/editSuratKeluar/" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
-                                                                <a href="/deleteSuratKeluar/" type="submit" class="btn-floating btn-small waves-effect waves-light red" 
+                                                                <a href="/editSuratKeluar/{{$item->id}}" class="btn-floating btn-small waves-effect waves-light green"><i class="material-icons">edit</i></a>
+                                                                <a href="/deleteSuratKeluar/{{$item->id}}" type="submit" class="btn-floating btn-small waves-effect waves-light red" 
                                                                     onclick="return confirm('hapus data ini?')"><i class="material-icons">delete</i></a>
                                                             </td>
                                                         </tr>                                                      
