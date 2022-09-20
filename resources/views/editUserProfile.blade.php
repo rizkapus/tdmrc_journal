@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Profile | TDMRC Office</title>
     <link rel="stylesheet" type="text/css" href="/vendors/vendors.min.css">
     <link rel="stylesheet" href="/vendors/select2/select2.min.css" type="text/css">
     <link rel="stylesheet" href="/vendors/select2/select2-materialize.css" type="text/css">
@@ -47,12 +47,7 @@
                                                     <label >email</label>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    {{-- <input id="password" type="password" name="password" value="{{$data->password}}"> --}}
-                                                    {{-- <label >Password</label> --}}
-                                                </div>
-                                            </div>
+                                            
                                             <div class="row">
                                                
                                                 <div class="row">
@@ -70,9 +65,7 @@
                         </div>
                         <br><br><br><br><br><br>
                     </div>
-                    </div>
-                  
-                  
+                    </div>             
      @include('layouts/footer')
 </body>
 </html>

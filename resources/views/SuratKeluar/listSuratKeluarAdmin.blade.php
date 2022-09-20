@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>List Surat Keluar | TDMRC Office</title>
     <link rel="stylesheet" type="text/css" href="/vendors/data-tables/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="/vendors/data-tables/extensions/responsive/css/responsive.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="/vendors/data-tables/css/select.dataTables.min.css">
@@ -16,23 +16,6 @@
      <!-- BEGIN: Page Main-->
      <div id="">
         <div class="row">
-            <div class="breadcrumbs-inline " id="breadcrumbs-wrapper">
-                <!-- Search for small screen-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 m6 l6 breadcrumbs-left">
-                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>List Surat</span></h5>
-                            <ol class="breadcrumbs mb-0">                   
-                                <li class="breadcrumb-item"><a href="#">Surat</a>
-                                </li>
-                                <li class="breadcrumb-item active">list Surat
-                                </li>
-                            </ol>
-                        </div>
-                        
-                    </div>
-                </div>
-
                 <div class="col s12 m12 l12">
                     <div id="form-with-validation" class="card card card-default scrollspy">
                         <div class="card-content">

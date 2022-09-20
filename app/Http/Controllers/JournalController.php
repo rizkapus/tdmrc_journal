@@ -61,7 +61,7 @@ class JournalController extends Controller
 
         
 
-        $request->file->move(public_path().('/files/journal'),$awal);
+       // $request->file->move(public_path().('/files/journal'),$awal);
         $ubah->update($dt);
         return redirect('/listJournal')->with('success', 'Data Berhasil Diedit!');
     }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add User</title>
+    <title>Add User | TDMRC Office</title>
 </head>
 <body>
     @include('layouts/header')
@@ -13,7 +13,6 @@
     <div id="">
         <div class="row">
             <div class="breadcrumbs-inline" id="breadcrumbs-wrapper">
-                <!-- Search for small screen-->
                 <div class="container">
                     <div class="row">
                         <div class="col s10 m6 l6 breadcrumbs-left">
@@ -86,8 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- users list ends -->
-                    </div>
+                </div>
         </div>
     </div>
 

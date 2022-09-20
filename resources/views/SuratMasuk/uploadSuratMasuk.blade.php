@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Upload Surat Masuk | TDMRC Office</title>
     
 </head>
 <body>
@@ -16,9 +16,9 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col s10 m6 l6 breadcrumbs-left">
-                                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Upload Surat</span></h5>
+                                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Surat</span></h5>
                                             <ol class="breadcrumbs mb-0">                   
-                                                <li class="breadcrumb-item"><a href="#">Surat</a>
+                                                <li class="breadcrumb-item"><a href="#">Surat Masuk</a>
                                                 </li>
                                                 <li class="breadcrumb-item active">Upload
                                                 </li>
@@ -27,13 +27,12 @@
                                         
                                     </div>
                                 </div>
-                            </div>
-            
+                            </div>            
                              <!-- table -->
                             <div class="col s12 ">
                                 <div id="placeholder" class="card card card-default scrollspy">
                                     <div class="card-content">
-                                        <h4 class="card-title">Form Upload Surat</h4>
+                                        <h4 class="card-title">Form Upload Surat Masuk</h4>
                                         <form method="post" enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">

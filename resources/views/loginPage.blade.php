@@ -39,7 +39,7 @@
                                     <input id="username" type="text" placeholder="Username" name="username" class="@error('username') is-invalid @enderror" required autofocus>
                                 </div>
                             </div>
-                            
+
                             <div class="row margin">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix pt-2">lock_outline</i>
@@ -61,8 +61,7 @@
         </div>
     </div>
 
-    <script src="/js/vendors.min.js"></script>
-    
+    <script src="/js/vendors.min.js"></script>   
     <script src="/js/plugins.js"></script>
     <script src="/js/search.js"></script>
     <script src="/js/custom/custom-script.js"></script>

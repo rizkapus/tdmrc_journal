@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Journal</title>
+    <title>Edit Journal | TDMRC Office</title>
 
 </head>
 
@@ -24,11 +24,11 @@
                         <form action="/updateJournal/{{$dt->id}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                                <div class="row">
+                                
                                     <div class="input-field col s12">
-                                        <select class="input-field" id="author" name="author" >  
-
-                                            <option disabled selected>Pilih Author</option>
+                                        <p>Pilih Author</p>
+                                        <select class="input-field col s12" id="author" name="author" required>                                   
+                                            <option value="{{$dt->author}}">{{$dt->author}}</option>
                                             <option value="Syamsidik">Syamsidik</option>
                                             <option value="Muksin">Muksin</option>
                                             <option value="Ella Meilianda">Ella Meilianda</option>
@@ -44,7 +44,7 @@
                                             <option value="Juliana Fisaini">Juliana Fisaini</option>
                                            
                                         </select>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="row">
@@ -86,6 +86,7 @@
     </div>
 
     @include('layouts/footer')
+    
 </body>
 
 </html>

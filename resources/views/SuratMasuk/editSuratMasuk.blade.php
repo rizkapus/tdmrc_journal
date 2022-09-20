@@ -4,36 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Surat Masuk | TDMRC Office</title>
     
 </head>
 <body>
     @include('layouts/header')
                 <!--Main Page-->
                     <div id="">
-                        <div class="row">
-                            <div class="breadcrumbs-inline " id="breadcrumbs-wrapper">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col s10 m6 l6 breadcrumbs-left">
-                                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Upload Surat</span></h5>
-                                            <ol class="breadcrumbs mb-0">                   
-                                                <li class="breadcrumb-item"><a href="#">Surat</a>
-                                                </li>
-                                                <li class="breadcrumb-item active">Upload
-                                                </li>
-                                            </ol>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-            
+                        <div class="row">                                     
                              <!-- table -->
                             <div class="col s12 ">
                                 <div id="placeholder" class="card card card-default scrollspy">
                                     <div class="card-content">
-                                        <h4 class="card-title">Form Upload Surat</h4>
+                                        <h4 class="card-title">Form Edit Surat</h4>
                                         <form action="/updateSuratMasuk/{{$dt->id}}" method="post" enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
@@ -68,6 +51,8 @@
                                                     <label for="name2">Disposisi</label>
                                                 </div>
                                             </div> 
+
+                                            @if ($user->role_id == 1 || $user->role_id == 2)
                                             <div class="row">
                                                 <div class="input-field col s12">
                                                     <p>Verifikasi</p>
@@ -78,6 +63,8 @@
                                                     </select>
                                                 </div>
                                             </div> 
+                                            @endif
+                                            
                                             <!--file-upload-->
                                             <div id="file-upload" class="section">
                                                 <div class="row section">

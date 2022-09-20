@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile User</title>
+    <title>Edit Profile User | TDMRC Office</title>
 </head>
 <body>
     @include('layouts/header')
@@ -20,18 +20,9 @@
                             <div class="card-content">
                                 <div class="row">
                                     <div class="" id="account">
-                                        <!-- users edit media object start -->
-                                        <div class="media display-flex align-items-center mb-2">
-                                            {{-- <a class="mr-2" href="#">
-                                                <img src="/images/user/1.jpg" alt="users avatar" class="z-depth-4 circle" height="64" width="64">
-                                            </a> --}}
-
-                                           
+                                        <div class="media display-flex align-items-center mb-2">                                                                                   
                                             <div class="media-body">
-                                                <h5 class="media-heading mt-0" value="sdd">Edit User</h5>
-                                                {{-- <div class="user-edit-btns display-flex">
-                                                    <a href="#" class="btn-small indigo">Change</a>
-                                                </div> --}}
+                                                <h5 class="media-heading mt-0" value="sdd">Edit User</h5>                                           
                                             </div>
                                         </div>
                  
@@ -64,28 +55,20 @@
                                                                 <label>Role</label>
                                                             </div>
                                                     </div>
-                                                </div>
-                                                
-                                                 
+                                                </div>                                                
                                                     <div class="col s12 display-flex justify-content-end mt-3">
                                                         <button type="submit" class="btn indigo" onclick="return confirm('ubah data ini?')">
                                                             Save changes</button>
                                                         <button type="button" class="btn btn-light">Cancel</button>
-                                                    
-                                                 
-                                            </div>
-                                        </form>
-                                        
-                                        
 
+                                                    </div>
+                                        </form>
                                     </div>         
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
             </div>
             <br>
             <br>

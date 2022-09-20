@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>List Surat Masuk | TDMRC Office</title>
     <link rel="stylesheet" type="text/css" href="/vendors/data-tables/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="/vendors/data-tables/extensions/responsive/css/responsive.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="/vendors/data-tables/css/select.dataTables.min.css">
@@ -21,9 +21,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s10 m6 l6 breadcrumbs-left">
-                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>List Surat</span></h5>
+                            <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Surat</span></h5>
                             <ol class="breadcrumbs mb-0">                   
-                                <li class="breadcrumb-item"><a href="#">Surat</a>
+                                <li class="breadcrumb-item"><a href="#">Surat Keluar</a>
                                 </li>
                                 <li class="breadcrumb-item active">list Surat
                                 </li>
@@ -68,7 +68,7 @@
                             <div class="col s12">
                                 <div class="card">
                                     <div class="card-content">
-                                        <h4 class="card-title">List Surat</h4>
+                                        <h4 class="card-title">List Surat Keluar</h4>
                                         <div class="row">
                                             <div class="col s12">
                                                 <table id="page-length-option" class="display">

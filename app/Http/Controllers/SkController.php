@@ -60,7 +60,7 @@ class SkController extends Controller
             'file' => $awal,
         ];
 
-        $request->file->move(public_path().('/files/sk'),$awal);
+       // $request->file->move(public_path().('/files/sk'),$awal);
         $ubah->update($dt);
         return redirect('/listSk')->with('success', 'Data Berhasil Diupdate!');
     }

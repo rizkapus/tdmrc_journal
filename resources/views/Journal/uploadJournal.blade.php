@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Upload Journal | TDMRC Office</title>
 
 </head>
 
@@ -39,8 +39,7 @@
                         <h4 class="card-title">Form Upload Journal</h4>
                         <form method="post" enctype="multipart/form-data">
                             @csrf
-                            <div class="row">
-                                <div class="row">
+                            <div class="row"> 
                                     <div class="input-field col s12">
                                         <select class="input-field" id="author" name="author">
                                             <option disabled selected>Pilih Author</option>
@@ -56,11 +55,9 @@
                                             <option value="Intan Dewi Kumala">Intan Dewi Kumala</option>
                                             <option value="Haekal Arief Haridhi">Haekal Arief Haridhi</option>
                                             <option value="Rizanna Rosemany">Rizanna Rosemany</option>
-                                            <option value="Juliana Fisaini">Juliana Fisaini</option>
-                                           
+                                            <option value="Juliana Fisaini">Juliana Fisaini</option>                                           
                                         </select>
                                     </div>
-                                </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
