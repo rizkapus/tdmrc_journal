@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/materialize.css">
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/style.css">
     <link rel="stylesheet" type="text/css" href="/css/pages/login.css">
+    <link rel="shortcut icon" href="/images/logo/usk.png">
 </head>
 <!-- END: Head-->
 

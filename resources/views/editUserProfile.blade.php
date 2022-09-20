@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/css/themes/vertical-menu-nav-dark-template/style.css">
     <link rel="stylesheet" type="text/css" href="/css/pages/page-users.css">
     <link rel="stylesheet" type="text/css" href="/css/custom/custom.css">
-
+    <link rel="shortcut icon" href="/images/logo/usk.png">
 </head>
 <body>
     @include('layouts/header')

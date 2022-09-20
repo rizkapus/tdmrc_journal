@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/vendors/data-tables/extensions/responsive/css/responsive.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="/vendors/data-tables/css/select.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pages/data-tables.css">
+    <link rel="shortcut icon" href="/images/logo/usk.png">
 </head>
 <body>
     @include('layouts/header')
