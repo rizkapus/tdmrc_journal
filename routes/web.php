@@ -42,6 +42,8 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3,4']], function(){
         Route::get('/deleteJournal/{id}', [JournalController::class, 'deleteJournal']);
 
         Route::get('/userProfile',[ProfileController::class, 'showProfile']);
+        Route::get('/editUserProfile/{id}',[ProfileController::class, 'editProfile']);
+        Route::post('/updateUserProfile/{id}',[ProfileController::class,'updateProfile']);
 
 });
 
@@ -57,6 +59,7 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
 
     //route Surat Masuk
     Route::get('/listSuratMasuk', [SuratMasukController::class, 'listSurat']);
+    Route::get('/listSuratMasukDirector', [SuratMasukController::class, 'listSuratDirector']);
     Route::get('/uploadSuratMasuk', [SuratMasukController::class, 'uploadSurat']);
     Route::post('/uploadSuratMasuk', [SuratMasukController::class, 'postSurat']);
     Route::get('/editSuratMasuk/{id}', [SuratMasukController::class, 'editSurat']);
@@ -65,6 +68,7 @@ Route::group(['middleware' => ['auth','cekUserLogin:1,2,3']], function(){
 
     //route Surat Keluar
     Route::get('/listSuratKeluar', [SuratKeluarController::class, 'listSurat']);
+    Route::get('/listSuratKeluarAdmin', [SuratKeluarController::class, 'listSuratAdmin']);
     Route::get('/uploadSuratKeluar', [SuratKeluarController::class, 'uploadSurat']);
     Route::post('/uploadSuratKeluar', [SuratKeluarController::class, 'postSurat']);
     Route::get('/editSuratKeluar/{id}', [SuratKeluarController::class, 'editSurat']);

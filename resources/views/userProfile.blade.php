@@ -31,13 +31,13 @@
                                         </a>
                                         <div class="media-body">
                                             <h6 class="media-heading">
-                                                <span class="users-view-name">Dean Stanley </span> 
+                                                <span class="users-view-name">{{ auth()->user()->name }}</span> 
                                             </h6>                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col s12 m5 quick-action-btns display-flex justify-content-end align-items-center pt-2">                                                                        
-                                    <a href="/editProfile" class="btn-small indigo">Edit</a>
+                                    <a href="/editUserProfile/{{auth()->user()->id}}" class="btn-small indigo">Edit</a>
                                 </div>
                             </div>
                         </div>
@@ -49,23 +49,26 @@
                                     <div class="">
                                         <table class="striped">
                                             <tbody>
+                                              
+                                       
                                                 <tr>
                                                     <td>Name :</td>
-                                                    <td class="users-view-name"></td>
+                                                    <td class="users-view-name">{{ auth()->user()->name }}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Username :</td>
-                                                    <td class="users-view-username"></td>
+                                                    <td class="users-view-username">{{ auth()->user()->username }}</td>
                                                 </tr>                                            
                                                 <tr>
                                                     <td>E-mail :</td>
-                                                    <td class="users-view-email"></td>
+                                                    <td class="users-view-email">{{ auth()->user()->email }}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Role :</td>
-                                                    <td>XYZ Corp. Ltd.</td>
+                                                    <td>{{ auth()->user()->role_id }}</td>
                                                 </tr>
-
+             
+                                               
                                             </tbody>
                                         </table>
                                     </div>

@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\uploadsuratmasuk;
+use Illuminate\Auth\Events\Verified;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
+use function GuzzleHttp\Promise\all;
 
 class SuratMasukController extends Controller
 {
@@ -12,6 +15,13 @@ class SuratMasukController extends Controller
        
         $dataSurat = uploadsuratmasuk::latest()->get();
         return view('SuratMasuk.listSuratMasuk',compact('dataSurat'))->with([
+            'user' => Auth::user(),
+        ]);
+    }
+    public function listSuratDirector(){
+       
+        $dataSurat = uploadsuratmasuk::latest()->where('verified','=',1)->get();
+        return view('SuratMasuk.listSuratMasukDirector',compact('dataSurat'))->with([
             'user' => Auth::user(),
         ]);
     }
@@ -39,7 +49,7 @@ class SuratMasukController extends Controller
             $nm->move(public_path().'/files/suratmasuk',$namaFile);
             $dtUpload->save();
 
-            return redirect('listSuratMasuk');
+            return redirect('listSuratMasuk')->with('success', 'Data Berhasil Ditambah!');
     }
 
     public function editSurat($id){
@@ -66,9 +76,9 @@ class SuratMasukController extends Controller
             'file' => $awal,
         ];
 
-        $request->file->move(public_path().('/files/suratmasuk'),$awal);
+        //$request->file->move(public_path().('/files/suratmasuk'),$awal);
         $ubah->update($dt);
-        return redirect('/listSuratMasuk');
+        return redirect('/listSuratMasuk')->with('success', 'Data Berhasil Diupdate!');
 
     }
     
@@ -81,7 +91,7 @@ class SuratMasukController extends Controller
         }
 
         $hapus->delete();
-        return back();
+        return back()->with('success', 'Data Berhasil Dihapus!');
     }
     
 }

@@ -15,6 +15,15 @@ class SuratKeluarController extends Controller
             'user' => Auth::user(),
         ]);
     }
+
+    public function listSuratAdmin(){
+       
+        $dataSurat = uploadsuratkeluar::latest()->where('verified','=',1)->get();
+        return view('SuratKeluar.listSuratKeluarAdmin',compact('dataSurat'))->with([
+            'user' => Auth::user(),
+        ]);
+    }
+
     public function uploadSurat(){
        
         return view('SuratKeluar.uploadSuratKeluar')->with([
@@ -39,7 +48,7 @@ class SuratKeluarController extends Controller
             $nm->move(public_path().'/files/suratkeluar',$namaFile);
             $dtUpload->save();
 
-            return redirect('listSuratKeluar');
+            return redirect('listSuratKeluar')->with('success', 'Data Berhasil Ditambah!');
     }
 
     public function editSurat($id){
@@ -66,9 +75,9 @@ class SuratKeluarController extends Controller
             'file' => $awal,
         ];
 
-        $request->file->move(public_path().('/files/suratkeluar'),$awal);
+       // $request->file->move(public_path().('/files/suratkeluar'),$awal);
         $ubah->update($dt);
-        return redirect('/listSuratKeluar');
+        return redirect('/listSuratKeluar')->with('success', 'Data Berhasil Diupdate!');
 
     }
 
@@ -81,6 +90,6 @@ class SuratKeluarController extends Controller
         }
 
         $hapus->delete();
-        return back();
+        return back()->with('success', 'Data Berhasil Dihapus!');
     }
 }

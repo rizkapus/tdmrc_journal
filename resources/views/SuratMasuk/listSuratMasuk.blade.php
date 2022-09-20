@@ -79,7 +79,8 @@
                                                             <th>Pengirim</th>
                                                             <th>Tanggal Surat</th>
                                                             <th>Pengolah</th>
-                                                            <th>Disposisi</th>
+                                                            <th>Disposisi</th>                                                         
+                                                            <th>Verifikasi</th>
                                                             <th>File</th>
                                                             <th>Action</th>
 
@@ -93,7 +94,8 @@
                                                             <td>{{$item->pengirim}}</td>
                                                             <td>{{$item->tanggal_surat}}</td>
                                                             <td>{{$item->pengolah}}</td>
-                                                            <td>{{$item->disposisi}}</td>
+                                                            <td>{{$item->disposisi}}</td>                                
+                                                            <td>{{$item->verified}}</td>                               
                                                             <td>
                                                                 <a href="{{asset('files/suratmasuk/'.$item->file)}}" target="_blank" >lihat file</a>   
                                                            </td>

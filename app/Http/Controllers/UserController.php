@@ -32,15 +32,15 @@ class UserController extends Controller
         $validatedData = $request->validate([           
             'name' => 'required',
             'username' => 'required',
-            'email' => 'required',
-            'password' => 'required',
+            'email' => 'required|email:dns',
+            'password' => 'required|min:5|max:255',
             'role_id' => 'required',
         ]);
         
         $validatedData['password'] = bcrypt($validatedData['password']);
  
         User::create($validatedData);
-        return redirect('/addUser');
+        return redirect('/addUser')->with('success', 'Data Berhasil Ditambah!');
         
     }
     
@@ -50,7 +50,7 @@ class UserController extends Controller
       $data->delete();
       
 
-      return redirect('/userList');
+      return redirect('/userList')->with('success', 'Data Berhasil Dihapus!');
     }
 
     public function edit($id){

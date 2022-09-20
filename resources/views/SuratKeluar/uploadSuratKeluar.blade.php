@@ -85,7 +85,7 @@
                                                         <p>Upload file</p>
                                                     </div>
                                                     <div class="col s12 m8 l9">
-                                                        <input type="file" id="file" name="file" class="dropify" />
+                                                        <input type="file" id="file" name="file" class="dropify" required/>
                                                     </div>
                                                 </div>                                                                
                                             </div>                                            

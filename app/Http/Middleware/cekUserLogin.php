@@ -17,16 +17,6 @@ class cekUserLogin
      */
     public function handle(Request $request, Closure $next, ...$rules)
     {
-        // if (!Auth::check()) {
-        //     return redirect('login');
-        // }
-
-        // $user = Auth::user();
-        // if ($user->role_id == $rules){
-        //     return $next($request);
-        // }
-
-        // return redirect('login')->with('error',"no access");
         if(in_array($request->user()->role_id,$rules)){
             return $next($request);
         }

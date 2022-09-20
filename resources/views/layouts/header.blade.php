@@ -229,7 +229,7 @@
                                         data-i18n="Second level child">Surat Keluar</span></a>
                                 <div class="collapsible-body">
                                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                                        <li><a href="/listSuratKeluar"><i
+                                        <li><a href="/listSuratKeluarAdmin"><i
                                                     class="material-icons">radio_button_unchecked</i><span>List</span></a>
                                         </li>
                                         <li><a href="/uploadSuratKeluar"><i
@@ -282,12 +282,23 @@
                                         data-i18n="Second level child">Surat Masuk</span></a>
                                 <div class="collapsible-body">
                                     <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-                                        <li><a href="/listSuratMasuk"><i
+                                        <li><a href="/listSuratMasukDirector"><i
                                                     class="material-icons">radio_button_unchecked</i><span>List</span></a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
+                            <li><a class="collapsible-header waves-effect waves-cyan" href="JavaScript:void(0)"><i
+                                class="material-icons">file_upload</i><span
+                                data-i18n="Second level child">Surat Keluar</span></a>
+                        <div class="collapsible-body">
+                            <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                                <li><a href="/listSuratKeluar"><i
+                                            class="material-icons">radio_button_unchecked</i><span>List</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                         </ul>
                     </div>
                 </li>
@@ -482,7 +493,7 @@
             </div>
         </div>
         <!-- END: Page Main-->
-
+        @include('sweetalert::alert')
         <!-- BEGIN VENDOR JS-->
         <script src="/js/vendors.min.js"></script>
         <!-- BEGIN VENDOR JS-->

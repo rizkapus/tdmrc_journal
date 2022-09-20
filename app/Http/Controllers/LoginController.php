@@ -9,12 +9,6 @@ class LoginController extends Controller
 {
     public function index(){
         if(Auth::user()){
-            // if($user->level == '1'){
-            //     return redirect()->intended('superadmin');
-            // }elseif($user->level == '2'){
-            //     return redirect()->intended('admin');
-            // }
-
             return redirect()->intended('/');
         }
 
@@ -32,11 +26,6 @@ class LoginController extends Controller
         if(Auth::attempt($kredensial)){
             $request->session()->regenerate();
             $user = Auth::user();
-            // if($user->level == '1'){
-            //     return redirect()->intended('superadmin');
-            // }elseif($user->level == '2'){
-            //     return redirect()->intended('admin');
-            // }
 
             if($user){
                 return redirect()->intended('home');
@@ -46,8 +35,8 @@ class LoginController extends Controller
         }
 
         return back()->withErrors([
-            'username' => 'Maaf username atau password salah',
-        ])->onlyInput('username');
+            'username' => 'Username atau Password Salah!'
+        ]);
     }
 
     public function logout(Request $request)

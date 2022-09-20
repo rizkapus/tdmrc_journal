@@ -36,7 +36,7 @@ class JournalController extends Controller
             $nm->move(public_path().'/files/journal',$namaFile);
             $dtUpload->save();
 
-            return redirect('listJournal');
+            return redirect('listJournal')->with('success', 'Data Berhasil Diupload!');
     }
    
     public function editJournal($id){
@@ -59,9 +59,11 @@ class JournalController extends Controller
             'file' => $awal,
         ];
 
+        
+
         $request->file->move(public_path().('/files/journal'),$awal);
         $ubah->update($dt);
-        return redirect('/listJournal')->with('success', 'data berhasil diupdate');
+        return redirect('/listJournal')->with('success', 'Data Berhasil Diedit!');
     }
 
     public function deleteJournal($id){
@@ -74,7 +76,7 @@ class JournalController extends Controller
         }
 
         $hapus->delete();
-        return back();
+        return back()->with('success', 'Data Berhasil Dihapus!');
 
     }
 }

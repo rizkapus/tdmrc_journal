@@ -37,7 +37,7 @@ class SkController extends Controller
             $nm->move(public_path().'/files/sk',$namaFile);
             $dtUpload->save();
 
-            return redirect('listSk');
+            return redirect('listSk')->with('success', 'Data Berhasil Ditambah!');
     }
     
     public function editSk($id){
@@ -62,7 +62,7 @@ class SkController extends Controller
 
         $request->file->move(public_path().('/files/sk'),$awal);
         $ubah->update($dt);
-        return redirect('/listSk')->with('success', 'data berhasil diupdate');
+        return redirect('/listSk')->with('success', 'Data Berhasil Diupdate!');
     }
 
     public function deleteSk($id){
@@ -75,7 +75,7 @@ class SkController extends Controller
         }
 
         $hapus->delete();
-        return back();
+        return back()->with('success', 'Data Berhasil Dihapus!');
     }
     
 }
