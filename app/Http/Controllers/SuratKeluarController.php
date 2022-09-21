@@ -75,7 +75,10 @@ class SuratKeluarController extends Controller
             'file' => $awal,
         ];
 
-       // $request->file->move(public_path().('/files/suratkeluar'),$awal);
+        if ($request->file('file')) {
+            $request->file->move(public_path().('/files/suratkeluar'),$awal);
+        }  
+
         $ubah->update($dt);
         return redirect('/listSuratKeluar')->with('success', 'Data Berhasil Diupdate!');
 

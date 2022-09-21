@@ -96,7 +96,14 @@
                                                             <td>{{$item->tanggal_surat}}</td>
                                                             <td>{{$item->pengolah}}</td>
                                                             <td>{{$item->disposisi}}</td>
-                                                            <td>{{$item->verified}}</td>
+                                                            
+                                                                @if ($item->verified == 1)
+                                                                
+                                                                   <td>{{ 'sudah verifikasi' }}</td> 
+                                                                    @else 
+                                                                    <td>{{ 'belum verfikasi' }}</td>
+                                                                @endif    
+
                                                             <td>
                                                                 <a href="{{asset('files/suratkeluar/'.$item->file)}}" target="_blank" >lihat file</a>   
                                                            </td>

@@ -6,6 +6,7 @@ use App\Models\uploadjournal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use function PHPUnit\Framework\fileExists;
 
 class JournalController extends Controller
 {
@@ -37,6 +38,7 @@ class JournalController extends Controller
             $dtUpload->save();
 
             return redirect('listJournal')->with('success', 'Data Berhasil Diupload!');
+
     }
    
     public function editJournal($id){
@@ -59,9 +61,10 @@ class JournalController extends Controller
             'file' => $awal,
         ];
 
+        if ($request->file('file')) {
+            $request->file->move(public_path().('/files/journal'),$awal);
+        }                         
         
-
-       // $request->file->move(public_path().('/files/journal'),$awal);
         $ubah->update($dt);
         return redirect('/listJournal')->with('success', 'Data Berhasil Diedit!');
     }
@@ -80,3 +83,5 @@ class JournalController extends Controller
 
     }
 }
+
+

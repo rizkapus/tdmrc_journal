@@ -65,7 +65,7 @@
                                     <p>File</p>
                                     <p>{{$dt->file}}</p>  
                                     <br>                                 
-                                    <input placeholder="" id="file" name="file" type="file">
+                                    <input placeholder="" id="file" name="file" type="file" value="{{$dt->file}}">
                                     
                                 </div>
                             </div>

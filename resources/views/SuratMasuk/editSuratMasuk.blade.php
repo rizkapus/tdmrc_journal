@@ -57,7 +57,7 @@
                                                 <div class="input-field col s12">
                                                     <p>Verifikasi</p>
                                                     <select class="input-field" name="verified" id="verified">             
-                                                        <option disabled selected>{{$dt->verified}}</option>
+                                                        <option disabled selected>{{$dt->verified == 1 ? 'sudah verifikasi' : 'belum verifikasi'}}</option>
                                                         <option value="1">Sudah Diverifikasi</option>
                                                         <option value="0">Belum Diverifikasi</option>
                                                     </select>
@@ -96,3 +96,4 @@
     @include('layouts/footer')
 </body>
 </html>
+

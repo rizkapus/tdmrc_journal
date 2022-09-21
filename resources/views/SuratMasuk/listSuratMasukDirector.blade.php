@@ -93,7 +93,9 @@
                                                             <td>{{$item->tanggal_surat}}</td>
                                                             <td>{{$item->pengolah}}</td>
                                                             <td>{{$item->disposisi}}</td>                                
-                                                            <td>{{$item->verified}}</td>                               
+                                                            @if ($item->verified == 1)
+                                                                <td>{{'sudah verifikasi'}}</td>
+                                                            @endif                              
                                                             <td>
                                                                 <a href="{{asset('files/suratmasuk/'.$item->file)}}" target="_blank" >lihat file</a>   
                                                            </td>

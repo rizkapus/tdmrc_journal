@@ -39,11 +39,8 @@
                                 <div class="row">
                                     <div class="input-field col m4 s6">
                                         <select class="select2 browser-default">
-                                            <option value="" disabled selected>Pilih Author</option>
-                                            <option value="romboid">Romboid</option>
-                                            <option value="trapeze">Trapeze</option>
-                                            <option value="triangle">Triangle</option>
-                                            <option value="polygon">Polygon</option>
+                                          <option value="" disabled selected>Pilih Author</option>  
+                                         
                                         </select>
                                     </div>
                                     <div class="input-field col m4 s6">
@@ -55,6 +52,7 @@
                                             <option value="polygon">Polygon</option>
                                         </select>
                                     </div>
+                                        
                                     <div class="input-field col m4 s12">
                                         <div class="input-field col s12">
                                             <button class="btn cyan waves-effect waves-light" type="submit" name="action">
