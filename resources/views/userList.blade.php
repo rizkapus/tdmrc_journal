@@ -40,12 +40,12 @@
                                         <div class="col s12 m6 l7">
                                             <label for="users-list-verified">Role</label>
                                             <div class="input-field">
-                                                <select class="form-control" id="users-list-verified">
-                                                    <option value=""></option>
-                                                    <option value="">superadmin</option>
-                                                    <option value="">admin</option>
-                                                    <option value="">director</option>
-                                                    <option value="">author</option>
+                                                <select class="form-control" id="search" name="search">
+                                                    <option disabled selected></option>
+                                                    <option value="1">superadmin</option>
+                                                    <option value="2">admin</option>
+                                                    <option value="3">director</option>
+                                                    <option value="4">author</option>
                                                 </select>
                                             </div>
                                         </div>

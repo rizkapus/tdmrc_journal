@@ -11,9 +11,17 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
-    public function userList(){
+    public function userList(Request $request){
        
-        $data = users::with('role')->paginate();
+        if ($request->has('search')) {
+            $data = users::where('role_id','=', $request->search)->paginate();
+            
+         }else {
+            $data = users::with('role')->paginate();
+         }
+
+
+        
         return view('userList',['data'=>$data])->with([
             'user' => Auth::user(),
         ]);

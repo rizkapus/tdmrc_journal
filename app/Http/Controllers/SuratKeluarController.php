@@ -8,9 +8,16 @@ use Illuminate\Support\Facades\Auth;
 
 class SuratKeluarController extends Controller
 {
-    public function listSurat(){
+    public function listSurat(Request $request){
        
-        $dataSurat = uploadsuratkeluar::latest()->get();
+        if ($request->has('search')) {
+            $dataSurat = uploadsuratkeluar::whereYear('tanggal_surat','=', $request->search)->get();
+            
+         }else {
+            $dataSurat = uploadsuratkeluar::latest()->get();
+         }
+
+        
         return view('SuratKeluar.listSuratKeluar', compact('dataSurat'))->with([
             'user' => Auth::user(),
         ]);

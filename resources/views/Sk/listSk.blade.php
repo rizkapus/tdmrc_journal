@@ -41,23 +41,18 @@
                             <form>
                                 <div class="row">
                                     <div class="input-field col m4 s6">
-                                        <select class="select2 browser-default">
-                                            <option value="" disabled selected>Pilih Jenis SK</option>
-                                            <option value="romboid">Romboid</option>
-                                            <option value="trapeze">Trapeze</option>
-                                            <option value="triangle">Triangle</option>
-                                            <option value="polygon">Polygon</option>
+                                        <select class="select2 browser-default" id="search" name="search">
+                                            <option value="0" selected> Pilih Tahun</option>
+                                                    <?php 
+                                                    $year = date('Y');
+                                                    $min = $year - 15;
+                                                        $max = $year;
+                                                    for( $i=$max; $i>=$min; $i-- ) {
+                                                    echo '<option value='.$i.'>'.$i.'</option>';
+                                                }?>
                                         </select>
                                     </div>
-                                    <div class="input-field col m4 s6">
-                                        <select class="select2 browser-default">
-                                            <option value="" disabled selected>Pilih Tahun</option>
-                                            <option value="romboid">Romboid</option>
-                                            <option value="trapeze">Trapeze</option>
-                                            <option value="triangle">Triangle</option>
-                                            <option value="polygon">Polygon</option>
-                                        </select>
-                                    </div>
+                                    
                                     <div class="input-field col m4 s12">
                                         <div class="input-field col s12">
                                             <button class="btn cyan waves-effect waves-light" type="submit" name="action">

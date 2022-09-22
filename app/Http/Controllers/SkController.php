@@ -8,9 +8,15 @@ use Illuminate\Support\Facades\Auth;
 
 class SkController extends Controller
 {
-    public function listSk(){
+    public function listSk(Request $request){
        
-        $dataSk = uploadsk::latest()->get();
+        if ($request->has('search')) {
+            $dataSk = uploadsk::whereYear('tanggal_terbit','=', $request->search)->get();
+            
+         }else {
+             $dataSk = uploadsk::latest()->get() ;
+         }
+
         return view('Sk.listSk', compact('dataSk'))->with([
             'user' => Auth::user(),
         ]);

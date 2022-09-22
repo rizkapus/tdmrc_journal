@@ -10,9 +10,16 @@ use function PHPUnit\Framework\fileExists;
 
 class JournalController extends Controller
 {
-    public function listJournal(){
-       
-        $dataJournal = uploadjournal::latest()->get() ;
+    public function listJournal(Request $request){
+        
+        if ($request->has('search')) {
+           $dataJournal = uploadjournal::whereYear('tanggal_terbit','=', $request->search)->get();
+           
+        }else {
+            $dataJournal = uploadjournal::latest()->get() ;
+        }
+
+    
         return view('Journal.listJournal', compact('dataJournal'))->with([
             'user' => Auth::user(),
         ]);

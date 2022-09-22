@@ -11,9 +11,16 @@ use function GuzzleHttp\Promise\all;
 
 class SuratMasukController extends Controller
 {
-    public function listSurat(){
-       
-        $dataSurat = uploadsuratmasuk::latest()->get();
+    public function listSurat(Request $request){
+
+        if ($request->has('search')) {
+            $dataSurat = uploadsuratmasuk::whereYear('tanggal_surat','=', $request->search)->get();
+            
+         }else {
+            $dataSurat = uploadsuratmasuk::latest()->get();
+         }
+
+        
         return view('SuratMasuk.listSuratMasuk',compact('dataSurat'))->with([
             'user' => Auth::user(),
         ]);
