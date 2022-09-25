@@ -23,8 +23,9 @@
                             @csrf
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <select class="select2 browser-default" id="jenis_sk" name="jenis_sk">
-                                        <option disabled selected>Pilih Jenis SK</option>
+                                    <p>Jenis SK</p>
+                                    <select class="select2 browser-default" id="jenis_sk" name="jenis_sk" >
+                                        <option value="{{$dt->jenis_sk}}">{{$dt->jenis_sk}}</option>
                                         <option value="kegiatan">Kegiatan</option>
                                         <option value="pangkat">Pangkat</option>
                                         
@@ -49,7 +50,7 @@
                                     <p>File</p> 
                                     <p>{{$dt->file}}</p> 
                                     <br>                                 
-                                    <input placeholder="" id="file" name="file" type="file">                                  
+                                    <input placeholder="" id="file" name="file" type="file" value="{{$dt->file}}">                                  
                                 </div>
                             </div>
                             <div class="row">

@@ -57,7 +57,7 @@
                                                 <div class="input-field col s12">
                                                     <p>Verifikasi</p>
                                                     <select class="input-field" name="verified" id="verified">             
-                                                        <option disabled selected>{{$dt->verified  == 1 ? 'sudah verifikasi' : 'belum verifikasi'}}</option>
+                                                        <option value="{{$dt->verified}}" >{{$dt->verified  == 1 ? 'sudah verifikasi' : 'belum verifikasi'}}</option>
                                                         <option value="1">Sudah Diverifikasi</option>
                                                         <option value="0">Belum Diverifikasi</option>
                                                     </select>
@@ -74,7 +74,7 @@
                                                         <br>
                                                     </div>
                                                     <div class="col s12 m8 l9">
-                                                        <input type="file" id="file" name="file" class="dropify" />
+                                                        <input type="file" id="file" name="file" class="dropify" value="{{$dt->file}}"/>
                                                     </div>
                                                 </div>                                                                
                                             </div>                                            
